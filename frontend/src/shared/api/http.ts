@@ -3,11 +3,16 @@ import type { ApiErrorBody } from './types'
 
 console.log("BACKEND URL =", import.meta.env.VITE_BACKEND_URL);
 
+const backendUrl = (import.meta.env.VITE_BACKEND_URL ?? '').trim().replace(/\/+$/, '')
+const apiBaseUrl = backendUrl
+  ? backendUrl.endsWith('/api') ? backendUrl : `${backendUrl}/api`
+  : '/api'
+
 /** Khoá lưu token của phiên làm việc trong localStorage. */
 export const TOKEN_KEY = 'erp.accessToken'
 
 export const http = axios.create({
-  baseURL: '/api',
+  baseURL: apiBaseUrl,
   timeout: 20000,
   headers: { 'Content-Type': 'application/json' },
 })
@@ -16,7 +21,7 @@ export const http = axios.create({
  * Client riêng cho tải tệp: không đặt sẵn Content-Type để trình duyệt tự sinh
  * boundary của multipart/form-data.
  */
-export const httpTep = axios.create({ baseURL: '/api', timeout: 60000 })
+export const httpTep = axios.create({ baseURL: apiBaseUrl, timeout: 60000 })
 
 function ganToken<T extends { headers: Record<string, unknown> }>(config: T): T {
   const token = localStorage.getItem(TOKEN_KEY)
@@ -62,7 +67,7 @@ export function thongBaoLoi(error: unknown, macDinh = 'Hệ thống đang xử l
     const duLieu = error.response?.data as ApiErrorBody | undefined
     if (duLieu?.thongBao) return duLieu.thongBao
     if (error.code === 'ERR_NETWORK') {
-      return 'Không kết nối được backend (http://localhost:8080). Kiểm tra `mvn spring-boot:run`.'
+      return 'Không kết nối được máy chủ. Vui lòng kiểm tra kết nối hoặc thử lại sau.'
     }
     if (error.response?.status === 403) return 'Bạn không có quyền thực hiện thao tác này'
   }
