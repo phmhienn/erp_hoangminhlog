@@ -1,5 +1,6 @@
 server:
   port: ${PORT:8080}
+  address: 0.0.0.0
   servlet:
     encoding:
       charset: UTF-8
@@ -16,7 +17,7 @@ spring:
 
   # Một CSDL dùng chung duy nhất (mục 2.6) — MySQL erp_hoangminh
   datasource:
-    url: jdbc:mysql://${DB_HOST:localhost}:${DB_PORT:3306}/${DB_NAME:erp_hoangminh}?useUnicode=true&characterEncoding=UTF-8&connectionCollation=utf8mb4_unicode_ci&serverTimezone=UTC&sslMode=REQUIRED
+    url: jdbc:mysql://${DB_HOST}:${DB_PORT}/${DB_NAME}?useSSL=true&requireSSL=true&serverTimezone=Asia/Ho_Chi_Minh&useUnicode=true&characterEncoding=UTF-8
     username: ${DB_USER:root}
     password: ${DB_PASSWORD:}
     hikari:
