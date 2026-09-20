@@ -36,7 +36,7 @@ spring:
           time_zone: Asia/Ho_Chi_Minh
 
   flyway:
-    enabled: true
+    enabled: false
     locations: classpath:db/migration
     baseline-on-migrate: true
     encoding: UTF-8
