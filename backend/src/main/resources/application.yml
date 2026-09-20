@@ -16,7 +16,7 @@ spring:
 
   # Một CSDL dùng chung duy nhất (mục 2.6) — MySQL erp_hoangminh
   datasource:
-    url: jdbc:mysql://${DB_HOST:localhost}:${DB_PORT:3306}/erp_hoangminh?createDatabaseIfNotExist=true&useUnicode=true&characterEncoding=UTF-8&connectionCollation=utf8mb4_unicode_ci&serverTimezone=Asia/Ho_Chi_Minh&useSSL=false&allowPublicKeyRetrieval=true
+    url: jdbc:mysql://${DB_HOST:localhost}:${DB_PORT:3306}/${DB_NAME:erp_hoangminh}?useUnicode=true&characterEncoding=UTF-8&connectionCollation=utf8mb4_unicode_ci&serverTimezone=UTC&sslMode=REQUIRED
     username: ${DB_USER:root}
     password: ${DB_PASSWORD:}
     hikari:
