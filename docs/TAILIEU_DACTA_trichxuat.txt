@@ -1,0 +1,2259 @@
+
+
+			-13607-34017900TRƯỜNG ĐẠI HỌC CÔNG NGHỆ GIAO THÔNG VẬN TẢI
+KHOA CÔNG NGHỆ THÔNG TIN
+-----o0o-----
+
+
+HỆ THỐNG HOẠCH ĐỊNH 
+NGUỒN LỰC DOANH NGHIỆP
+ĐỀ TÀI 
+   XÂY DỰNG ERP CHO CÔNG TY HOÀNG MINH
+Giảng viên hướng dẫn:
+	TH.S Vũ Thị Thu Hà
+Lớp:    
+		74DCHT21
+                      Nhóm lớn:
+		02
+		
+	
+	
+	
+	
+	Hà Nội – 08/2026
+
+			TRƯỜNG ĐẠI HỌC CÔNG NGHỆ GIAO THÔNG VẬN TẢI
+KHOA CÔNG NGHỆ THÔNG TIN
+-----o0o-----
+
+
+HỆ THỐNG HOẠCH ĐỊNH 
+NGUỒN LỰC DOANH NGHIỆP
+ĐỀ TÀI 
+   XÂY DỰNG ERP CHO CÔNG TY CỔ PHẦN ĐẦU TƯ 
+THƯƠNG MẠI VÀ DỊCH VỤ HOÀNG MINH
+Giảng viên hướng dẫn:
+	TH.S Vũ Thị Thu Hà
+Lớp:    
+		74DCHT21
+                      Nhóm lớn:
+		02
+		
+	
+	
+	
+	
+	Hà Nội – 08/2026
+
+
+MỤC LỤC
+ TOC \o "1-4" \h \z \u DANH MỤC HÌNH ẢNH	 PAGEREF _Toc240051955 \h 5
+DANH MỤC TỪ VIẾT TẮT	 PAGEREF _Toc240051956 \h 6
+CHƯƠNG I. MỞ ĐẦU	 PAGEREF _Toc240051957 \h 1
+1.1. Lý do triển khai hệ thống ERP	 PAGEREF _Toc240051958 \h 1
+1.2. Mục đích	 PAGEREF _Toc240051959 \h 4
+1.3. Phạm vi	 PAGEREF _Toc240051960 \h 4
+CHƯƠNG II. GIỚI THIỆU CÔNG TY HOÀNG MINH	 PAGEREF _Toc240051961 \h 6
+2.1. Công ty Hoàng Minh	 PAGEREF _Toc240051962 \h 6
+	2.1.1. Thông tin chung	 PAGEREF _Toc240051963 \h 6
+	2.1.2. Lịch sử phát triển	 PAGEREF _Toc240051964 \h 7
+	2.1.3. Sứ mệnh và định hướng phát triển	 PAGEREF _Toc240051965 \h 7
+	2.1.4. Văn hoá doanh nghiệp	 PAGEREF _Toc240051966 \h 8
+	2.1.5. Lĩnh vực hoạt động	 PAGEREF _Toc240051967 \h 9
+	2.1.6. Quy mô hoạt động	 PAGEREF _Toc240051968 \h 10
+	2.1.7. Cơ cấu tổ chức	 PAGEREF _Toc240051969 \h 11
+	2.1.8. Đánh giá chung	 PAGEREF _Toc240051970 \h 12
+2.2. Tình hình phát triển ERP hiện tại	 PAGEREF _Toc240051971 \h 12
+	2.2.1. Thuận lợi	 PAGEREF _Toc240051972 \h 12
+	2.2.2. Khó khăn	 PAGEREF _Toc240051973 \h 13
+	2.2.3. Phân hệ nghiệp vụ	 PAGEREF _Toc240051974 \h 13
+2.3. Các hệ thống cốt lõi	 PAGEREF _Toc240051975 \h 16
+2.4. Đặc điểm của các hệ thống	 PAGEREF _Toc240051976 \h 17
+2.5. Giải pháp tối ưu	 PAGEREF _Toc240051977 \h 18
+2.6. Chọn phương pháp, công nghệ	 PAGEREF _Toc240051978 \h 19
+2.7. Lập kế hoạch	 PAGEREF _Toc240051979 \h 19
+CHƯƠNG III. TRIỂN KHAI HỆ THỐNG	 PAGEREF _Toc240051980 \h 21
+3.1. Hệ thống quản lý đơn hàng/dịch vụ	 PAGEREF _Toc240051981 \h 21
+	3.1.1. Mô tả nghiệp vụ hệ thống	 PAGEREF _Toc240051982 \h 21
+	3.1.2. Yêu cầu chức năng và phi chức năng	 PAGEREF _Toc240051983 \h 22
+	3.1.3. Đặc tả hệ thống	 PAGEREF _Toc240051984 \h 23
+	3.1.4. Xây dựng CSDL	 PAGEREF _Toc240051985 \h 28
+	3.2. Hệ thống quản lý nhập - xuất kho	 PAGEREF _Toc240051986 \h 30
+	3.2.1. Mô tả nghiệp vụ hệ thống	 PAGEREF _Toc240051987 \h 30
+	3.2.2. Yêu cầu chức năng và phi chức năng	 PAGEREF _Toc240051988 \h 31
+	3.2.3. Đặc tả hệ thống	 PAGEREF _Toc240051989 \h 32
+	3.2.4. Xây dựng CSDL	 PAGEREF _Toc240051990 \h 40
+	3.3. Hệ thống Quản lý điều phối & giao hàng	 PAGEREF _Toc240051991 \h 43
+	3.3.1. Mô tả nghiệp vụ hệ thống	 PAGEREF _Toc240051992 \h 43
+	3.3.2. Yêu cầu chức năng và phi chức năng	 PAGEREF _Toc240051993 \h 44
+	3.3.3. Đặc tả hệ thống	 PAGEREF _Toc240051994 \h 45
+	3.3.4. Xây dựng CSDL	 PAGEREF _Toc240051995 \h 53
+	3.4. Hệ thống Quản lý hồ sơ nhân viên	 PAGEREF _Toc240051996 \h 56
+	3.4.1. Mô tả nghiệp vụ hệ thống	 PAGEREF _Toc240051997 \h 56
+	3.4.2. Yêu cầu chức năng và phi chức năng	 PAGEREF _Toc240051998 \h 56
+	3.4.3. Đặc tả hệ thống	 PAGEREF _Toc240051999 \h 57
+	3.4.4. Xây dựng CSDL	 PAGEREF _Toc240052000 \h 63
+	3.5. Hệ thống Quản lý Thu/Chi - COD	 PAGEREF _Toc240052001 \h 63
+	3.5.1. Mô tả nghiệp vụ hệ thống	 PAGEREF _Toc240052002 \h 63
+	3.5.2. Yêu cầu chức năng và phi chức năng	 PAGEREF _Toc240052003 \h 64
+	3.5.3. Đặc tả hệ thống	 PAGEREF _Toc240052004 \h 65
+	3.5.4. Xây dựng CSDL	 PAGEREF _Toc240052005 \h 69
+CHƯƠNG IV. XÂY DỰNG CƠ SỞ DỮ LIỆU	 PAGEREF _Toc240052006 \h 72
+4.1. Biểu đồ lớp của hệ thống	 PAGEREF _Toc240052007 \h 72
+4.2. Xây dựng cấu trúc bảng chung	 PAGEREF _Toc240052008 \h 74
+4.3. Thiết kế cơ sở dữ liệu chung	 PAGEREF _Toc240052009 \h 75
+
+ 
+
+
+DANH MỤC HÌNH ẢNH
+	 TOC \h \z \c "Hình" Hình 1. Ví dụ mô hình ERP tổng quan.	 PAGEREF _Toc238509239 \h 9
+
+
+DANH MỤC TỪ VIẾT TẮT
+STT
+Viết tắt
+Giải thích
+1
+CSDL
+Cơ sở dữ liệu
+5
+QTHT
+Quản trị hệ thống
+
+
+
+CHƯƠNG I. MỞ ĐẦU
+1.1. Lý do triển khai hệ thống ERP
+Trong những năm gần đây, hoạt động vận tải và logistics ngày càng có vai trò quan trọng đối với quá trình lưu thông và phân phối hàng hóa. Đặc thù của lĩnh vực này là có nhiều nghiệp vụ phát sinh liên tục như quản lý khách hàng, tiếp nhận đơn hàng, quản lý hàng hóa, lưu kho, điều phối phương tiện, quản lý tài xế, theo dõi giao hàng, quản lý doanh thu, chi phí và nhân sự. Các nghiệp vụ này có mối quan hệ chặt chẽ và cần được trao đổi dữ liệu xuyên suốt giữa nhiều bộ phận trong doanh nghiệp.
+Công ty Cổ phần Đầu tư Thương mại và Dịch vụ Hoàng Minh (Hoàng Minh Logistics) hoạt động trong lĩnh vực vận tải hàng hóa và logistics, với các hoạt động liên quan đến vận tải, kho bãi và các dịch vụ logistics. Với đặc thù hoạt động gồm nhiều bộ phận và nghiệp vụ có sự liên kết, việc tổ chức và quản lý dữ liệu một cách thống nhất có ý nghĩa quan trọng đối với công tác điều hành và quản lý doanh nghiệp.
+Hệ thống ERP (Enterprise Resource Planning) cho phép tích hợp các nghiệp vụ và dữ liệu của nhiều bộ phận trên một hệ thống thống nhất. Thay vì quản lý dữ liệu tách rời theo từng bộ phận, ERP giúp kết nối thông tin giữa quản lý khách hàng và đơn hàng, kho bãi, vận tải, tài chính - kế toán và nhân sự. Qua đó, dữ liệu được chia sẻ giữa các phân hệ, hạn chế việc nhập liệu trùng lặp và hỗ trợ nhà quản lý theo dõi toàn bộ quá trình hoạt động của doanh nghiệp.
+Xuất phát từ đặc thù nghiệp vụ của doanh nghiệp vận tải và logistics, lựa chọn đề tài xây dựng hệ thống ERP được đề xuất cho Hoàng Minh Logistics, tập trung vào việc phân tích, thiết kế và xây dựng các phân hệ nghiệp vụ cốt lõi gồm: Quản lý Khách hàng & Đơn hàng, Quản lý Kho (WMS), Quản lý Vận tải & Điều phối (TMS), Quản lý Tài chính - Kế toán (FI/CO) và Quản lý Nhân sự (HRM).
+Thông qua việc xây dựng hệ thống, đề tài hướng tới mô phỏng một quy trình quản lý tích hợp từ khi tiếp nhận yêu cầu của khách hàng, tạo đơn hàng, quản lý hàng hóa và kho, điều phối vận chuyển, giao hàng đến ghi nhận doanh thu, chi phí và quản lý nhân sự. Đây cũng là cơ sở để nghiên cứu và áp dụng các kiến thức về phân tích thiết kế hệ thống thông tin, cơ sở dữ liệu và phát triển phần mềm vào một bài toán nghiệp vụ thực tế trong lĩnh vực logistics.
+
+Lý do khách quan:
+Trong bối cảnh nền kinh tế số và thương mại điện tử phát triển mạnh mẽ tại Việt Nam, nhu cầu vận chuyển, giao nhận hàng hóa của khách hàng cá nhân và doanh nghiệp tăng trưởng nhanh chóng. Khách hàng ngày càng đòi hỏi khắt khe hơn về tốc độ giao hàng, khả năng tra cứu và theo dõi đơn hàng theo thời gian thực, độ chính xác trong giao nhận và tính minh bạch về chi phí, cước phí phát sinh.
+Nhu cầu khách hàng
+Muốn tra cứu, định vị đơn hàng nhanh chóng chỉ qua vài thao tác trên điện thoại hoặc website.
+Theo dõi trạng thái giao hàng liên tục theo thời gian thực, từ lúc tạo đơn đến khi giao thành công.
+Yêu cầu giao hàng đúng địa chỉ, đúng người nhận, đúng khung giờ đã hẹn, hạn chế thất lạc, giao nhầm.
+Yêu cầu phản hồi nhanh khi phát sinh sự cố (giao trễ, hư hỏng hàng, đổi địa chỉ nhận, khiếu nại).
+Yêu cầu thông tin minh bạch về cước phí, phụ phí, tiến độ đối soát tiền thu hộ (COD).
+Xu hướng thị trường
+Sự bùng nổ của các sàn thương mại điện tử (Shopee, TikTok Shop, Lazada…) kéo theo khối lượng đơn hàng vận chuyển tăng mạnh mỗi ngày, đặt áp lực lớn lên năng lực tiếp nhận, khai thác và giao hàng của các doanh nghiệp logistics vừa và nhỏ như Hoàng Minh.
+Nhu cầu giao nhận tăng nhanh theo mùa vụ (cao điểm lễ, Tết, các đợt khuyến mãi của sàn thương mại điện tử) tạo áp lực lớn lên nguồn lực kho và vận tải.
+Cạnh tranh trong ngành logistics ngày càng gay gắt, đòi hỏi doanh nghiệp phải tối ưu chi phí và rút ngắn thời gian giao hàng để giữ chân khách hàng.
+Xu hướng công nghệ
+Chuyển đổi số: số hóa các thao tác thủ công, giấy tờ sang nền tảng số.
+Điện toán đám mây: cho phép lưu trữ, xử lý dữ liệu và truy cập hệ thống từ nhiều điểm giao dịch phân tán.
+Phân tích dữ liệu: khai thác dữ liệu lịch sử đơn hàng để dự báo sản lượng, tối ưu nguồn lực theo mùa cao điểm.
+Tích hợp hệ thống: nhu cầu liên kết dữ liệu giữa các khâu bán hàng, kho, vận tải, tài chính trên một nền tảng ERP duy nhất, thay vì các công cụ rời rạc như hiện nay.
+
+Lý do chủ quan:
+Xét từ nội tại doanh nghiệp, Công ty Cổ phần Đầu tư Thương mại và Dịch vụ Hoàng Minh đang trong giai đoạn mở rộng quy mô hoạt động kinh doanh dịch vụ giao nhận – vận tải, kéo theo khối lượng dữ liệu nghiệp vụ phát sinh ngày càng lớn và đa dạng, cụ thể gồm các nhóm dữ liệu sau:
+Dữ liệu khách hàng và đối tác: hồ sơ khách hàng cá nhân/doanh nghiệp, thông tin các sàn thương mại điện tử và đối tác vận tải ngoài.
+Dữ liệu đơn hàng: mã vận đơn, kích thước, trọng lượng, loại hình dịch vụ, hành trình luân chuyển chi tiết.
+Dữ liệu nguồn lực vận hành: thông tin nhân viên, ca làm việc, phương tiện vận tải, sức chứa và tồn kho tại từng điểm giao dịch.
+Dữ liệu tài chính: cước dịch vụ, tiền thu hộ COD, công nợ đối soát, chi phí xăng xe và chi phí vận hành khác.
+Từ thực tế phát sinh dữ liệu đa dạng nêu trên, công ty đối mặt với các khó khăn nội tại cụ thể như sau:
+Các bộ phận (kinh doanh, kho vận, vận tải, kế toán) hiện đang sử dụng các công cụ quản lý rời rạc (sổ sách, Excel, phần mềm đơn lẻ theo từng khâu), dẫn đến tình trạng dữ liệu phân tán, trùng lặp và thiếu liên thông giữa các phòng ban.
+Việc đối chiếu công nợ, đối soát tiền thu hộ (COD) và tổng hợp báo cáo doanh thu - chi phí hiện được thực hiện thủ công, mất nhiều thời gian và dễ phát sinh sai lệch.
+Thiếu công cụ giám sát tập trung khiến ban quản lý khó phát hiện kịp thời các điểm nghẽn tại kho hoặc các tuyến vận chuyển trễ hạn.
+Ban lãnh đạo công ty có nhu cầu cấp thiết về một hệ thống thông tin tập trung, giúp đồng bộ dữ liệu giữa các bộ phận, chuẩn hóa quy trình nghiệp vụ và cung cấp báo cáo quản trị kịp thời phục vụ ra quyết định.
+
+Lý do nhóm chọn đề tài:
+Nhóm lựa chọn lĩnh vực logistics vì đây là ngành có quy trình nghiệp vụ rõ ràng, xuyên suốt nhiều phòng ban (kinh doanh - kho - vận tải - nhân sự - tài chính), phù hợp để thực hành phân tích và thiết kế một hệ thống ERP đầy đủ các đặc trưng tích hợp. 
+Nhóm quan tâm đến bài toán thực tế mà nhiều doanh nghiệp logistics vừa và nhỏ đang gặp phải (như Hoàng Minh): quy mô đủ lớn để cần quản trị dữ liệu tập trung nhưng chưa đủ nguồn lực đầu tư ERP thương mại - đây là bối cảnh có tính ứng dụng cao, giúp nhóm rèn luyện kỹ năng khảo sát, phân tích nghiệp vụ và thiết kế hệ thống sát với thực tế doanh nghiệp. 
+Việc lựa chọn một doanh nghiệp cụ thể để triển khai giúp nhóm có đối tượng khảo sát rõ ràng, tránh phân tích chung chung, thiếu thực tế.
+1.2. Mục đích
+Mục đích: Phân tích, thiết kế và xây dựng một hệ thống ERP giúp đồng bộ dữ liệu, liên kết chặt chẽ giữa các phòng ban của Hoàng Minh, hỗ trợ quản trị xuyên suốt quy trình cung cấp dịch vụ giao nhận - vận tải, thay thế các công cụ quản lý rời rạc hiện tại.
+Yêu cầu:
+Khảo sát, đánh giá đầy đủ hiện trạng quản lý ở tất cả các phòng ban liên quan.
+Xác định cơ cấu tổ chức, các phân hệ nghiệp vụ và hệ thống con trong từng phân hệ; từ đó chọn ra các hệ thống cốt lõi để thiết kế (tối thiểu 3 phân hệ khác nhau).
+Xây dựng tài liệu phân tích, thiết kế hệ thống (yêu cầu chức năng/phi chức năng, cơ sở dữ liệu dùng chung).
+Xây dựng chương trình thử nghiệm minh họa sự kết nối dữ liệu giữa các hệ thống cốt lõi đã chọn.
+1.3. Phạm vi
+Do đặc thù Hoàng Minh là doanh nghiệp cung cấp dịch vụ giao nhận - vận tải, không sản xuất hàng hóa, nên "sản phẩm" cốt lõi cần quản lý chính là đơn hàng/dịch vụ xuyên suốt vòng đời của nó (tiếp nhận - xử lý - vận chuyển - giao hàng - đối soát), thay vì hàng tồn kho nguyên vật liệu hay kế hoạch sản xuất như doanh nghiệp sản xuất. Trên cơ sở đó, đề tài giới hạn phạm vi thực hiện như sau:
+Phạm vi thực hiện:
+Đề tài tập trung khảo sát cơ cấu tổ chức và các phân hệ nghiệp vụ của Công ty Hoàng Minh, từ đó lựa chọn các hệ thống con phục vụ trực tiếp cho việc quản lý vòng đời dịch vụ giao nhận, thuộc ít nhất 3 phân hệ khác nhau, để phân tích, thiết kế và xây dựng chương trình thử nghiệm minh họa kết nối dữ liệu giữa chúng. Cụ thể:
+Phân hệ Kinh doanh: Hệ thống quản lý đơn hàng/dịch vụ - theo dõi vòng đời đơn hàng từ khi tạo đến khi hoàn tất.
+Phân hệ Kho vận: Hệ thống quản lý kho trung chuyển - quản lý nhập/xuất hàng hóa tạm thời theo từng đơn hàng tại kho trung chuyển (không quản lý tồn kho nguyên vật liệu hay lập kế hoạch sản xuất).
+Phân hệ Vận tải - Giao nhận: Hệ thống quản lý điều phối & trạng thái giao hàng - khâu trực tiếp "tạo ra" chất lượng dịch vụ (thời gian, độ chính xác giao hàng).
+Phân hệ Nhân sự: Hệ thống quản lý hồ sơ nhân viên - gắn với hiệu suất của đội ngũ vận hành dịch vụ (điều phối viên, shipper).
+Phân hệ Tài chính: Hệ thống quản lý thu chi/COD - nghiệp vụ đặc thù của dịch vụ giao nhận.
+Giới hạn về dữ liệu và chương trình: dữ liệu sử dụng là dữ liệu giả lập với khối lượng vừa đủ minh họa luồng nghiệp vụ; chương trình thử nghiệm chạy trên nền web, phục vụ demo các thao tác chính, không bao gồm ứng dụng di động hay tích hợp API thanh toán/định vị thực tế của bên thứ ba.
+Ngoài phạm vi đề tài: các nghiệp vụ liên quan đến sản xuất hoặc quản lý nguyên vật liệu (không áp dụng do đặc thù doanh nghiệp dịch vụ); hoạt động đầu tư - thương mại hàng tiêu dùng của công ty; các phân hệ/hệ thống con còn lại chưa được chọn; các bài toán tối ưu nâng cao (tối ưu tuyến đường, dự báo nhu cầu bằng AI...).
+
+
+
+CHƯƠNG II. GIỚI THIỆU CÔNG TY HOÀNG MINH
+2.1. Công ty Hoàng Minh
+2.1.1. Thông tin chung
+Tên doanh nghiệp: Công ty Cổ phần Đầu tư Thương mại và Dịch vụ Hoàng Minh.
+Hoàng Minh Logistics là doanh nghiệp hoạt động trong lĩnh vực vận tải hàng hóa và logistics. Doanh nghiệp cung cấp các dịch vụ liên quan đến vận tải, kho bãi và các hoạt động hỗ trợ logistics.
+Các thông tin cơ bản về doanh nghiệp:
+Tên đầy đủ: Công ty Cổ phần Đầu tư Thương mại và Dịch vụ Hoàng Minh.
+Tên viết tắt: HOANG MINH TI&S., JSC.
+Tên thương hiệu: Hoàng Minh Logistics.
+Lĩnh vực hoạt động: Vận tải hàng hóa, logistics, kho bãi, thương mại dịch vụ, xuất nhập khẩu và các dịch vụ liên quan.
+Mã số thuế: 0109259120.
+Người đại diện theo pháp luật: Nguyễn Minh Tân.
+Chức vụ: Tổng Giám đốc.
+Địa chỉ văn phòng đại diện: Số 12, Đường Tiên Phong, Thôn Lương Châu, Xã Sóc Sơn, Hà Nội.
+Tư cách pháp lý:
+Hoàng Minh hoạt động theo mô hình công ty cổ phần, có tư cách pháp nhân và thực hiện hoạt động kinh doanh theo quy định của pháp luật Việt Nam.
+Loại hình doanh nghiệp: Công ty cổ phần.
+Tên pháp lý: Công ty Cổ phần Đầu tư Thương mại và Dịch vụ Hoàng Minh.
+Mã số thuế: 0109259120.
+Người đại diện theo pháp luật: Nguyễn Minh Tân - Tổng Giám đốc.
+Lĩnh vực hoạt động và dịch vụ:
+Các nhóm dịch vụ được xem xét trong phạm vi đề tài bao gồm:
+Vận tải hàng hóa bằng xe container.
+Vận tải hàng hóa bằng xe tải.
+Vận tải hàng hóa bằng đường sắt.
+Vận tải hàng hóa bằng đường biển.
+Dịch vụ cho thuê kho bãi.
+Các dịch vụ hỗ trợ liên quan đến xuất nhập khẩu và hải quan.
+Các hoạt động trên được mô hình hóa thành chuỗi nghiệp vụ logistics từ tiếp nhận yêu cầu vận chuyển, quản lý hàng hóa, lưu kho, lập kế hoạch vận chuyển, điều phối phương tiện, giao hàng đến ghi nhận doanh thu và chi phí.
+2.1.2. Lịch sử phát triển
+Giai đoạn 2016 - 2018: Khởi nghiệp thương mại
+Công ty Hoàng Minh được thành lập ngày 12/03/2016 với quy mô ban đầu rất nhỏ: 1 văn phòng duy nhất, khoảng 8 - 10 nhân sự, hoạt động phân phối một số mặt hàng tiêu dùng cho khoảng 30 - 40 khách hàng/đại lý bán buôn tại khu vực Hà Đông, Hà Nội. Giai đoạn này công ty chưa có đội xe riêng, thuê ngoài phương tiện khi cần vận chuyển hàng hóa.
+Giai đoạn 2019 - 2020: Bắt đầu mảng giao nhận
+Trước sự bùng nổ của thương mại điện tử, công ty mở điểm giao dịch đầu tiên chuyên tiếp nhận và vận chuyển đơn hàng cho các hộ kinh doanh online. Quy mô tăng lên: nhân sự khoảng 25 - 30 người, đầu tư 3 - 5 xe máy chuyên dụng và 1 xe tải nhỏ đầu tiên, lượng khách hàng (hộ kinh doanh) tăng lên khoảng 150 - 200, sản lượng xử lý trung bình khoảng 100 - 150 đơn/ngày.
+Giai đoạn 2021 - 2022: Mở rộng mạng lưới
+Công ty xây dựng kho trung chuyển đầu tiên (~300 m²), mở thêm 2 - 3 điểm giao dịch vệ tinh. Nhân sự tăng lên khoảng 45 - 55 người, đội xe mở rộng lên 10 - 12 xe (gồm xe máy và xe tải nhỏ), số lượng khách hàng ký hợp đồng thường xuyên đạt khoảng 400 - 500, sản lượng xử lý trung bình tăng lên khoảng 300 - 400 đơn/ngày.
+Giai đoạn 2023 - nay: Xác định logistics là trọng tâm
+Công ty chính thức xác định giao nhận - vận tải - logistics là mảng kinh doanh trọng tâm, mở rộng kho trung chuyển chính lên khoảng 500 - 700 m², nâng tổng số điểm giao dịch lên 3 - 5 điểm. Quy mô nhân sự hiện tại đạt khoảng 60 - 80 người, đội phương tiện khoảng 18 - 20 xe (xe máy chuyên dụng và xe tải nhỏ, kết hợp thuê ngoài cho tuyến liên tỉnh), số lượng khách hàng thường xuyên (hộ kinh doanh, doanh nghiệp TMĐT) đạt khoảng 700 - 900, sản lượng xử lý trung bình 500 - 800 đơn/ngày, có thể tăng gấp 2 - 3 lần vào cao điểm.
+2.1.3. Sứ mệnh và định hướng phát triển
+Sứ mệnh
+Công ty Hoàng Minh cung cấp dịch vụ giao nhận - vận tải nhanh chóng, chính xác và tiết kiệm chi phí, đồng hành cùng sự phát triển của khách hàng, đặc biệt là các cá nhân, hộ kinh doanh và doanh nghiệp thương mại điện tử vừa và nhỏ tại khu vực miền Bắc. Công ty lấy sự hài lòng, tin tưởng của khách hàng và tính minh bạch trong vận hành làm thước đo cho mọi hoạt động kinh doanh.
+Tầm nhìn
+Trong vòng 5 năm tới, Hoàng Minh hướng tới trở thành đơn vị cung cấp dịch vụ logistics uy tín tại khu vực miền Bắc, được khách hàng lựa chọn nhờ tốc độ giao hàng, độ chính xác trong giao nhận và mức chi phí hợp lý; đồng thời là một trong những doanh nghiệp tiên phong ứng dụng công nghệ quản trị (ERP) trong nhóm các đơn vị logistics quy mô vừa và nhỏ, thu hẹp khoảng cách về năng lực vận hành so với các doanh nghiệp logistics lớn.
+Định hướng phát triển ngắn hạn (1 - 2 năm)
+Chuẩn hóa toàn bộ quy trình nghiệp vụ giữa các phòng ban (kinh doanh, kho, vận tải, nhân sự, kế toán) trên một nền tảng dữ liệu dùng chung, thay thế hoàn toàn các công cụ quản lý rời rạc (Excel, sổ sách) hiện tại.
+Triển khai hệ thống ERP nội bộ để tự động hóa các khâu: tạo đơn hàng, theo dõi hành trình vận chuyển, đối soát tiền thu hộ COD và lập báo cáo quản trị, qua đó giảm thời gian xử lý thủ công và sai sót dữ liệu.
+Nâng cao chất lượng dịch vụ khách hàng thông qua khả năng tra cứu và theo dõi trạng thái đơn hàng theo thời gian thực, rút ngắn thời gian phản hồi khiếu nại.
+Thiết lập cơ chế phân quyền người dùng theo vai trò (RBAC) để bảo đảm an toàn dữ liệu khi hệ thống được đưa vào vận hành thực tế.
+Định hướng phát triển trung và dài hạn (3 - 5 năm)
+Mở rộng mạng lưới điểm giao dịch và kho trung chuyển ra các tỉnh, thành lân cận (Hưng Yên, Bắc Ninh, Hải Dương, Vĩnh Phúc…), tiến tới bao phủ toàn bộ khu vực miền Bắc.
+Đầu tư phát triển đội phương tiện vận tải tự có, giảm dần mức độ phụ thuộc vào các đối tác vận tải ngoài nhằm chủ động hơn về chi phí và chất lượng dịch vụ.
+Ứng dụng các công nghệ phân tích dữ liệu và tối ưu hóa tuyến đường (route optimization) để nâng cao hiệu suất khai thác, giảm chi phí nhiên liệu và thời gian giao hàng.
+Từng bước xây dựng thương hiệu Hoàng Minh trở thành lựa chọn tin cậy hàng đầu của các hộ kinh doanh và doanh nghiệp thương mại điện tử vừa và nhỏ tại khu vực miền Bắc, làm nền tảng để mở rộng quy mô hoạt động trong dài hạn.
+2.1.4. Văn hoá doanh nghiệp
+Bên cạnh sứ mệnh và tầm nhìn, Hoàng Minh xây dựng văn hóa làm việc dựa trên tính kỷ luật và tinh thần phục vụ, phù hợp với đặc thù ngành giao nhận - nơi tốc độ và độ chính xác quyết định trải nghiệm khách hàng:
+Kỷ luật về thời gian: mọi khâu (nhận đơn, xuất kho, giao hàng) đều gắn với mốc thời gian cam kết với khách hàng; nhân viên được rèn thói quen báo cáo tiến độ và xử lý sự cố ngay khi phát sinh, không để tồn đọng.
+Tinh thần phục vụ và trách nhiệm với khách hàng: đội ngũ shipper, điều phối viên được đào tạo thái độ giao tiếp lịch sự, chủ động thông báo khi có chậm trễ, xem việc "giao đúng hẹn" là cam kết danh dự chứ không chỉ là chỉ tiêu công việc.
+Làm việc nhóm liên phòng ban: do đặc thù một đơn hàng phải đi qua nhiều bộ phận (kinh doanh → kho → vận tải → kế toán), công ty khuyến khích văn hóa phối hợp, chia sẻ thông tin kịp thời giữa các phòng thay vì làm việc khép kín từng bộ phận.
+Cởi mở với thay đổi và công nghệ: vì đang trong giai đoạn chuyển đổi từ quản lý thủ công sang hệ thống ERP, công ty đề cao tinh thần học hỏi, thích nghi với công cụ mới của toàn bộ nhân viên, từ cấp quản lý đến nhân viên tác nghiệp.
+2.1.5. Lĩnh vực hoạt động
+Công ty Hoàng Minh hoạt động trong nhiều nhóm dịch vụ vận tải và logistics. Việc phân định các lĩnh vực này giúp xác định các phân hệ ERP cần thiết và luồng dữ liệu giữa các bộ phận.
+Vận tải hàng hóa bằng xe tải
+Hoàng Minh cung cấp dịch vụ vận chuyển hàng hóa bằng xe tải trên các tuyến Bắc - Trung - Nam. Đội xe đa dạng tải trọng giúp doanh nghiệp đáp ứng nhiều loại nhu cầu vận chuyển.
+Vận tải hàng hóa bằng xe container
+Dịch vụ container phục vụ vận chuyển hàng hóa trên các tuyến Bắc - Trung - Nam, phù hợp với hàng hóa cần vận chuyển bằng container 40 - 50 feet. ERP cần hỗ trợ quản lý lệnh vận chuyển, phương tiện, lịch xe, tài xế, khách hàng và chi phí theo chuyến.
+Vận tải hàng hóa bằng đường sắt
+Hoàng Minh cung cấp giải pháp vận chuyển bằng đường sắt, hướng tới sự linh hoạt về phương tiện và lộ trình. Hoạt động này đòi hỏi theo dõi lịch trình, lô hàng, điểm giao nhận và chi phí.
+Vận tải hàng hóa bằng đường biển
+Doanh nghiệp giới thiệu dịch vụ vận tải hàng hóa bằng đường biển nhằm cung cấp thêm phương thức vận chuyển cho khách hàng. Dữ liệu liên quan cần được kết nối với đơn hàng, chứng từ, lịch vận chuyển và đối soát.
+Cho thuê kho bãi
+Hoàng Minh cung cấp dịch vụ cho thuê kho bãi và giới thiệu hệ thống kho có trang bị giá kệ. Hoạt động kho cần quản lý nhập - xuất - tồn, vị trí lưu trữ, khách hàng thuê kho, diện tích và chi phí.
+Dịch vụ hải quan và xuất nhập khẩu
+Khai báo hải quan là một công đoạn quan trọng trong hoạt động xuất nhập khẩu. ERP có thể hỗ trợ quản lý hồ sơ, chứng từ, tình trạng xử lý và liên kết dữ liệu với đơn hàng vận chuyển.
+=> Đánh giá dưới góc độ ERP: Chuỗi hoạt động có thể khái quát: Tiếp nhận yêu cầu → Lập đơn hàng → Điều phối phương tiện → Nhận hàng → Vận chuyển → Giao nhận → Đối soát → Thanh toán. Với kho và xuất nhập khẩu, chuỗi được mở rộng thêm các bước nhập kho, lưu kho, xuất kho và xử lý chứng từ.
+2.1.6. Quy mô hoạt động
+Sau hơn 5 năm mở rộng sang lĩnh vực giao nhận - vận tải, Hoàng Minh đã hình thành một hệ thống vận hành gồm văn phòng điều hành, kho trung chuyển và các điểm giao dịch vệ tinh, đủ để đáp ứng khối lượng đơn hàng phát sinh hằng ngày tại Hà Nội và các tỉnh lân cận. Quy mô công ty ở mức vừa và nhỏ, nhưng đã có đầy đủ các mắt xích của một chuỗi giao nhận thu nhỏ - từ tiếp nhận đơn, lưu kho, vận chuyển đến giao hàng và thu hộ tiền.
+Quy mô về mặt bằng, phòng ốc:
+Trụ sở chính (văn phòng điều hành): khoảng 150 - 200 m², đặt tại Hà Nội, bố trí các phòng chức năng: Phòng Kinh doanh, Phòng Kế toán - Tài chính, Phòng Nhân sự, phòng họp và khu vực làm việc chung.
+Kho trung chuyển trung tâm: khoảng 500 - 700 m², dùng để tập kết, phân loại và trung chuyển hàng hóa giữa các khu vực trước khi đưa đi giao.
+Các điểm giao dịch vệ tinh: 3 - 5 điểm, diện tích nhỏ (30 - 50 m²/điểm), đặt tại các khu vực đông dân cư/gần chợ đầu mối để tiếp nhận đơn hàng trực tiếp từ khách hàng.
+Quy mô nhân lực:
+Tổng số nhân sự: khoảng 60 - 80 người, phân bổ như sau: 
+Khối văn phòng (kinh doanh, kế toán, nhân sự): khoảng 15 - 20 người.
+Nhân viên khai thác - kho: khoảng 10 - 15 người.
+Nhân viên điều phối vận tải: khoảng 5 - 7 người.
+Đội ngũ giao hàng (shipper): khoảng 30 - 40 người, chiếm tỷ trọng lớn nhất do đặc thù ngành giao nhận chặng cuối.
+Đối tác và khách hàng gắn với quy mô vận hành:
+Đối tác đầu vào (nguồn đơn hàng): các sàn thương mại điện tử (Shopee, TikTok Shop…), các hộ kinh doanh online, doanh nghiệp bán lẻ vừa và nhỏ ký hợp đồng vận chuyển với công ty.
+Đối tác hỗ trợ vận hành: các đơn vị vận tải ngoài (thuê phương tiện tải trọng lớn cho tuyến liên tỉnh xa), nhà cung cấp phương tiện, nhiên liệu, vật tư đóng gói (thùng carton, băng keo, bao bì chống sốc).
+Khách hàng đầu ra (người thụ hưởng dịch vụ): người nhận hàng là khách hàng cá nhân của các shop/hộ kinh doanh nói trên - công ty đóng vai trò trung gian, cung cấp dịch vụ giao nhận cho người bán và thực hiện việc giao hàng tới người mua cuối, đồng thời thu hộ tiền hàng và hoàn trả lại cho người bán.
+2.1.7. Cơ cấu tổ chức
+Hoàng Minh tổ chức quản trị theo mô hình công ty cổ phần, phân cấp thành 3 tầng: quản trị (ĐHĐCĐ, Ban kiểm soát, Ban cố vấn, HĐQT), điều hành (Giám đốc điều hành), và tác nghiệp (5 phòng ban chuyên môn cùng đội ngũ nhân viên trực tiếp).
+Đại hội đồng cổ đông (ĐHĐCĐ): cơ quan có thẩm quyền cao nhất, quyết định các vấn đề lớn của công ty.
+Ban kiểm soát: giám sát độc lập hoạt động quản trị và điều hành, báo cáo trực tiếp lên ĐHĐCĐ.
+Ban cố vấn: hỗ trợ tư vấn chuyên môn, chiến lược cho Hội đồng quản trị.
+Hội đồng quản trị (HĐQT): hoạch định chiến lược phát triển, giám sát Giám đốc điều hành.
+Giám đốc điều hành: đầu mối điều hành duy nhất, trực tiếp quản lý cả 5 phòng ban nghiệp vụ hằng ngày.
+5 Trưởng phòng báo cáo trực tiếp Giám đốc, mỗi người chịu trách nhiệm toàn bộ nghiệp vụ của phòng mình và quản lý nhân viên cấp dưới.
+Nhân viên tác nghiệp: là lực lượng trực tiếp vận hành dịch vụ hằng ngày — từ tiếp nhận đơn (NV kinh doanh, CSKH), xử lý kho (thủ kho, NV khai thác), giao hàng (điều phối viên, shipper), đến hỗ trợ nội bộ (chuyên viên nhân sự, kế toán viên, thủ quỹ).
+
+2.1.8. Đánh giá chung
+Công ty Hoàng Minh có lợi thế là quy mô gọn nhẹ, bộ máy quản lý linh hoạt, dễ dàng triển khai thay đổi quy trình so với các doanh nghiệp logistics lớn có bộ máy cồng kềnh. Ban lãnh đạo có tư duy cởi mở và sẵn sàng đầu tư cho chuyển đổi số. Tuy nhiên, do quy mô còn hạn chế, công ty gặp khó khăn về nguồn lực đầu tư công nghệ, thiếu nhân sự chuyên trách công nghệ thông tin và còn phụ thuộc nhiều vào các thao tác thủ công trong quản lý dữ liệu.
+Đây là cơ sở thực tiễn quan trọng cho việc đề xuất xây dựng hệ thống ERP: một hệ thống được thiết kế vừa đủ, tập trung vào 5 phân hệ cốt lõi, sẽ giúp Hoàng Minh chuẩn hóa quy trình, tiết kiệm chi phí vận hành và nâng cao năng lực cạnh tranh mà không đòi hỏi mức đầu tư quá lớn như các giải pháp ERP dành cho doanh nghiệp quy mô lớn.
+2.2. Tình hình phát triển ERP hiện tại
+2.2.1. Thuận lợi
+Ban lãnh đạo công ty có tư duy cởi mở, sẵn sàng đầu tư ứng dụng công nghệ thông tin vào quản lý vận hành.
+Quy mô doanh nghiệp vừa và nhỏ giúp việc khảo sát, chuẩn hóa quy trình nghiệp vụ và triển khai hệ thống mới diễn ra thuận lợi, ít vướng các quy trình cồng kềnh.
+Đội ngũ nhân viên trẻ, có khả năng thích ứng nhanh với công cụ phần mềm mới.
+Số lượng phòng ban và phân hệ nghiệp vụ không quá nhiều (5 mảng chính), thuận lợi cho việc thiết kế một hệ thống ERP gọn nhẹ, đúng trọng tâm.
+2.2.2. Khó khăn
+Các bộ phận hiện sử dụng công cụ quản lý rời rạc (sổ sách, Excel, phần mềm đơn lẻ theo từng khâu), chưa có sự liên thông dữ liệu giữa các phòng ban.
+Việc thu chi, tiền thu hộ COD giữa bộ phận vận tải và kế toán còn thực hiện thủ công, dễ xảy ra sai sót và chậm trễ, đặc biệt vào các đợt cao điểm đơn hàng.
+Thiếu công cụ theo dõi trạng thái đơn hàng theo thời gian thực khiến việc tra cứu thông tin cho khách hàng còn chậm, ảnh hưởng đến trải nghiệm khách hàng.
+Việc phân công tuyến giao hàng và phương tiện chủ yếu dựa trên kinh nghiệm cá nhân của điều phối viên, chưa có công cụ hỗ trợ tối ưu tuyến đường.
+Nguồn lực tài chính và nhân sự công nghệ thông tin còn hạn chế so với các doanh nghiệp logistics lớn, gây khó khăn khi lựa chọn và triển khai giải pháp ERP thương mại có sẵn.
+2.2.3. Phân hệ nghiệp vụ
+Tương ứng với 5 hệ thống con nêu trên, có thể xác định 5 phân hệ nghiệp vụ chính cần được tích hợp trong hệ thống ERP tương lai:
+Phân hệ
+Đơn vị phụ trách
+Dữ liệu/nghiệp vụ chính hiện quản lý
+Phân hệ Kinh doanh
+Phòng Kinh doanh
+Hồ sơ khách hàng, tạo đơn, mã vận đơn, tính cước
+Phân hệ Kho vận
+Phòng Khai thác - Kho vận
+Nhập/xuất kho, tồn kho tại từng điểm giao dịch
+Phân hệ Vận tải & Giao nhận
+Phòng Vận tải - Giao nhận
+Phân công tuyến, phương tiện, shipper, trạng thái giao hàng
+Phân hệ Nhân sự
+Phòng Nhân sự
+Hồ sơ nhân viên, chấm công, tính lương, hiệu suất
+Phân hệ Tài chính - Kế toán
+Phòng Kế toán - Tài chính
+Doanh thu, đối soát COD, công nợ, báo cáo kinh doanh
+
+Phân hệ kinh doanh:
+
+Phân hệ Kho vận:
+
+Phân hệ Vận tải & Giao nhận:
+
+Phân hệ Nhân sự:
+
+Phân hệ Tài chính – Kế toán:
+
+2.3. Các hệ thống cốt lõi
+Trong phạm vi đề tài, hệ thống ERP được đề xuất cho Công ty Hoàng Minh được xây dựng nhằm tích hợp các nghiệp vụ chính trong hoạt động giao nhận - vận tải và logistics. Hệ thống tập trung vào việc quản lý thống nhất dữ liệu đơn hàng, kho hàng, vận tải, nhân sự và tài chính - kế toán.
+Hệ thống gồm 05 hệ thống cốt lõi, có mối quan hệ và trao đổi dữ liệu với nhau, bao gồm:
+Hệ thống quản lý đơn hàng/dịch vụ (thuộc phân hệ Kinh doanh)
+Hệ thống quản lý nhập – xuất kho (thuộc phân hệ Kho vận)
+Hệ thống quản lý điều phối & giao hàng (thuộc phân hệ Vận tải - Giao nhận)
+Hệ thống quản lý hồ sơ nhân viên (thuộc phân hệ Nhân sự)
+Hệ thống quản lý thu chi & COD (thuộc phân hệ Tài chính - Kế toán)
+Các hệ thống được thiết kế theo nguyên tắc dữ liệu được quản lý tập trung trên một cơ sở dữ liệu dùng chung, có thể được sử dụng bởi nhiều bộ phận khác nhau. Quy trình nghiệp vụ tổng thể được mô phỏng từ khi tiếp nhận yêu cầu vận chuyển của khách hàng, tạo đơn hàng/dịch vụ, nhập hàng vào kho, điều phối phương tiện và giao hàng, đến ghi nhận công nợ, đối soát COD và quản lý hồ sơ nhân sự thực hiện các khâu trên.
+Vì sao các hệ thống này là cốt lõi?
+Quản lý đơn hàng/dịch vụ là điểm khởi đầu của toàn bộ chuỗi nghiệp vụ, quyết định dữ liệu đầu vào cho tất cả các hệ thống còn lại.
+Quản lý nhập kho là khâu trung chuyển bắt buộc giữa việc tiếp nhận đơn hàng và quá trình giao hàng, ảnh hưởng trực tiếp đến tốc độ xử lý.
+Quản lý điều phối & giao hàng quyết định trực tiếp chất lượng dịch vụ (thời gian, độ chính xác) mà khách hàng cảm nhận được.
+Quản lý nhân viên cung cấp dữ liệu nhân sự dùng chung cho hệ thống Kho và Vận tải khi phân công công việc, gắn liền hiệu suất với chi phí vận hành.
+Quản lý thu chi & COD là điểm kết thúc của chuỗi giá trị dịch vụ, tổng hợp toàn bộ dữ liệu tài chính phục vụ ra quyết định, đồng thời là nghiệp vụ đặc thù riêng của ngành giao nhận.
+2.4. Đặc điểm của các hệ thống
+2.4.1. Hệ thống quản lý đơn hàng/dịch vụ
+Đặc điểm hệ thống: tiếp nhận thông tin khách hàng, khởi tạo đơn hàng, gán mã vận đơn, tính cước theo trọng lượng/khoảng cách, theo dõi trạng thái đơn hàng theo thời gian thực từ khi tạo đến khi hoàn tất hoặc hoàn trả.
+Có thiết kế lại hay không: Có - hiện đang quản lý bằng Excel rời rạc, không liên kết được với Kho và Vận tải, nên cần xây dựng mới hoàn toàn với cơ chế cập nhật trạng thái tự động, thay vì chỉnh sửa/vá thêm công cụ hiện có.
+2.4.2. Hệ thống quản lý nhập - xuất kho
+Đặc điểm hệ thống: ghi nhận hàng hóa nhập vào kho trung chuyển theo từng đơn hàng, kiểm tra số lượng/tình trạng hàng khi tiếp nhận, cập nhật vị trí lưu trữ tạm thời; đồng thời ghi nhận hàng hóa xuất kho khi bàn giao cho bộ phận vận tải để đi giao, tự động giảm số lượng tồn tương ứng. Do đặc thù doanh nghiệp dịch vụ, hệ thống chỉ quản lý luồng hàng trung chuyển ra - vào (không quản lý tồn kho nguyên vật liệu hay lập kế hoạch sản xuất).
+Có thiết kế lại hay không: Có - hiện đang ghi chép thủ công bằng sổ sách/Excel riêng lẻ tại từng điểm giao dịch cho cả hai chiều nhập và xuất, chưa đồng bộ dữ liệu tồn kho toàn công ty, cần xây dựng mới với dữ liệu tập trung, liên kết trực tiếp với hệ thống Quản lý đơn hàng (khi nhập) và hệ thống Quản lý điều phối & giao hàng (khi xuất).
+2.4.3. Hệ thống quản lý điều phối & giao hàng
+Đặc điểm hệ thống: đây là khâu trực tiếp tạo ra chất lượng dịch vụ (thời gian, độ chính xác giao hàng); phân công phương tiện/shipper theo tuyến, cập nhật trạng thái hành trình (đang giao/đã giao/giao lại/hoàn hàng), ghi nhận thời điểm giao hàng thực tế.
+Có thiết kế lại hay không: Có - hiện đang phân công bằng bảng giấy/file chia sẻ nội bộ (Zalo, Excel) theo kinh nghiệm cá nhân của điều phối viên, chưa có công cụ hỗ trợ; cần xây dựng mới với cơ chế điều phối tập trung, liên kết trực tiếp với dữ liệu đơn hàng.
+2.4.4. Hệ thống quản lý hồ sơ nhân viên
+Đặc điểm hệ thống: lưu trữ thông tin nhân viên (kinh doanh, kho, vận tải, shipper), gán vai trò/phòng ban, là dữ liệu nền dùng chung cho hệ thống Kho và Vận tải khi phân công công việc và làm căn cứ tính hiệu suất.
+Có thiết kế lại hay không: Có - hiện quản lý rời rạc theo từng bộ phận (chấm công tay hoặc file riêng), chưa liên kết với dữ liệu công việc thực tế (số đơn xử lý, số chuyến giao); cần xây dựng mới để làm dữ liệu nền liên thông với các hệ thống khác, thay vì chỉ là bảng chấm công đơn thuần.
+2.4.5. Hệ thống quản lý thu chi & COD
+Đặc điểm hệ thống: ghi nhận tiền thu hộ (COD) theo từng đơn hàng, đối soát theo đợt giữa shipper - công ty - khách hàng (người bán), tự động tổng hợp khi đơn hàng chuyển trạng thái "đã giao thành công", xuất báo cáo công nợ theo khách hàng/shipper.
+Có thiết kế lại hay không: Có - hiện đang hạch toán độc lập trên phần mềm/sổ sách kế toán riêng, không liên kết trực tiếp với dữ liệu đơn hàng/vận tải, việc đối soát phải làm thủ công; cần xây dựng mới với cơ chế tự động tổng hợp COD ngay khi đơn hàng hoàn tất.  
+2.5. Giải pháp tối ưu
+Từ kết quả khảo sát và đánh giá hiện trạng, có 3 hướng giải pháp ERP mà Hoàng Minh có thể cân nhắc:
+Giải pháp
+Ưu điểm
+Nhược điểm
+Mua phần mềm ERP thương mại có sẵn (SAP, Odoo, Oracle NetSuite…)
+Đầy đủ tính năng, được kiểm chứng thực tế
+Chi phí bản quyền và triển khai cao, dư thừa nhiều tính năng không phù hợp với quy mô nhỏ, khó tùy biến theo đặc thù dịch vụ COD/giao nhận
+Thuê dịch vụ ERP theo mô hình SaaS
+Chi phí khởi điểm thấp, triển khai nhanh
+Phụ thuộc nhà cung cấp, khó tùy chỉnh sâu theo quy trình riêng, rủi ro dữ liệu nằm ngoài công ty
+Tự xây dựng hệ thống ERP riêng, tập trung vào các hệ thống cốt lõi đã chọn
+Bám sát đúng quy trình thực tế, chi phí phù hợp năng lực tài chính hiện tại, dễ mở rộng dần theo từng giai đoạn
+Cần thời gian phân tích - thiết kế - xây dựng, đòi hỏi nhóm triển khai nắm rõ nghiệp vụ
+Giải pháp được lựa chọn: Đề tài đề xuất tự xây dựng hệ thống ERP riêng cho Hoàng Minh, tập trung vào 5 hệ thống cốt lõi đã xác định (Quản lý bán hàng, Quản lý tồn kho, Quản lý điều phối, Quản lý hồ sơ nhân viên, Quản lý thu chi/COD), thay vì mua giải pháp thương mại có sẵn. Đây là giải pháp tối ưu vì:
+Phù hợp năng lực tài chính của một doanh nghiệp vừa và nhỏ, tránh lãng phí chi phí bản quyền cho các module không dùng đến.
+Cho phép thiết kế đúng theo đặc thù nghiệp vụ dịch vụ giao nhận (COD, đối soát shipper…) mà phần mềm ERP thương mại thường không tối ưu sẵn.
+Có thể triển khai theo từng giai đoạn (mở rộng thêm hệ thống con sau này) thay vì phải đầu tư trọn gói ngay từ đầu.
+2.6. Chọn phương pháp, công nghệ
+Phương pháp phân tích và thiết kế:
+Áp dụng phương pháp phân tích thiết kế hướng đối, sử dụng ngôn ngữ mô hình hóa UML (Unified Modeling Language) để biểu diễn nghiệp vụ: Use Case Diagram (mô tả chức năng hệ thống), Sequence Diagram/Activity Diagram (mô tả trình tự xử lý), Class Diagram (mô tả cấu trúc dữ liệu).
+Mô hình phát triển phần mềm: áp dụng mô hình phát triển lặp (Agile/Scrum thu gọn), triển khai theo từng hệ thống cốt lõi một, cho phép kiểm thử và điều chỉnh sớm thay vì làm trọn gói theo mô hình thác nước.
+Kiến trúc hệ thống:
+Kiến trúc client-server, ứng dụng web (web-based application), cho phép nhân viên các phòng ban truy cập hệ thống qua trình duyệt từ nhiều điểm giao dịch khác nhau mà không cần cài đặt phần mềm cục bộ.
+Toàn bộ dữ liệu lưu trữ tập trung trên một cơ sở dữ liệu dùng chung (Single Shared Database), là nền tảng để 5 hệ thống cốt lõi liên kết dữ liệu với nhau.
+Công nghệ dự kiến sử dụng:
+Ngôn ngữ lập trình & framework: Java (Spring Boot) cho phần backend, React cho phần giao diện.
+Hệ quản trị cơ sở dữ liệu: MySQL.
+Công cụ hỗ trợ: Git để quản lý mã nguồn, công cụ vẽ UML (draw.io, StarUML) để thiết kế tài liệu.
+2.7. Lập kế hoạch
+Tuần
+Nội dung công việc
+Kết quả đầu ra
+Tuần 1
+Khảo sát cơ cấu tổ chức, phân hệ, hệ thống con; đặc tả yêu cầu chức năng/phi chức năng cho 5 hệ thống cốt lõi
+Tài liệu khảo sát hiện trạng, đặc tả yêu cầu
+Tuần 2
+Thiết kế Usecase, biểu đồ trình tự/hoạt động, biểu đồ lớp; thiết kế CSDL dùng chung (ERD)
+Tài liệu thiết kế hệ thống & CSDL
+Tuần 3
+Xây dựng CSDL; lập trình 2-3 hệ thống cốt lõi đầu tiên (Quản lý đơn hàng, Quản lý nhập kho, Quản lý điều phối & giao hàng)
+CSDL hoàn chỉnh + chương trình từng phần
+Tuần 4
+Lập trình 2 hệ thống còn lại (Quản lý hồ sơ nhân viên, Quản lý thu chi & COD); tích hợp toàn bộ 5 hệ thống trên cùng CSDL
+Chương trình chạy thử nghiệm hoàn chỉnh
+Tuần 5
+Kiểm thử từng chức năng và luồng liên kết giữa các hệ thống; hoàn thiện tài liệu và báo cáo đồ án
+Báo cáo kiểm thử + hồ sơ đồ án hoàn chỉnh
+
+
+CHƯƠNG III. TRIỂN KHAI HỆ THỐNG
+3.1. Hệ thống quản lý đơn hàng/dịch vụ
+3.1.1. Mô tả nghiệp vụ hệ thống
+Hệ thống quản lý đơn hàng/dịch vụ là hệ thống cốt lõi thuộc Phân hệ Kinh doanh trong hệ thống ERP của Hoàng Minh Logistics. Hệ thống có nhiệm vụ quản lý thông tin yêu cầu sử dụng dịch vụ giao nhận – vận tải của khách hàng, từ khi tiếp nhận yêu cầu, tạo đơn hàng/dịch vụ, xác nhận thông tin đến khi chuyển dữ liệu cho các hệ thống liên quan để tiếp tục thực hiện.
+Do đặc thù Hoàng Minh Logistics là doanh nghiệp cung cấp dịch vụ vận tải và logistics, đối tượng quản lý chính của hệ thống không phải là hoạt động bán hàng hóa mà là đơn hàng/dịch vụ logistics. Thông tin được quản lý bao gồm khách hàng, người gửi, người nhận, hàng hóa/kiện hàng, địa điểm lấy – giao hàng, loại dịch vụ và các thông tin liên quan đến đơn hàng.
+Quy trình vận hành cụ thể:
+Tiếp nhận yêu cầu dịch vụ: khi khách hàng có nhu cầu sử dụng dịch vụ giao nhận - vận tải, nhân viên kinh doanh tiếp nhận thông tin ban đầu như thông tin khách hàng, người gửi, người nhận, địa chỉ lấy hàng, địa chỉ giao hàng, loại hàng hóa, số lượng, trọng lượng và yêu cầu dịch vụ.
+Kiểm tra thông tin khách hàng: nhân viên kinh doanh tra cứu thông tin khách hàng trên hệ thống. Nếu khách hàng đã tồn tại, hệ thống sử dụng thông tin đã có; nếu là khách hàng mới, nhân viên tạo hồ sơ khách hàng trên hệ thống.
+Tạo đơn hàng/dịch vụ: sau khi thông tin được xác nhận, nhân viên kinh doanh tạo đơn hàng/dịch vụ trên hệ thống ERP. Đơn hàng được cấp mã định danh và lưu các thông tin cần thiết phục vụ các bước xử lý tiếp theo.
+Xác nhận đơn hàng: nhân viên kinh doanh kiểm tra lại thông tin đơn hàng trước khi xác nhận. Trường hợp thông tin chưa đầy đủ hoặc có sai lệch, đơn hàng được yêu cầu bổ sung hoặc chỉnh sửa trước khi xác nhận.
+Chuyển thông tin sang các hệ thống liên quan: sau khi đơn hàng được xác nhận, thông tin đơn hàng và hàng hóa/kiện hàng được cung cấp cho Hệ thống Quản lý nhập kho để phục vụ việc tiếp nhận hàng tại kho trung chuyển. Đồng thời, thông tin đơn hàng là cơ sở để Hệ thống Quản lý điều phối & giao hàng tiếp tục lập kế hoạch và thực hiện điều phối khi hàng đã sẵn sàng vận chuyển.
+Cập nhật trạng thái đơn hàng: trong quá trình xử lý, trạng thái của đơn hàng được cập nhật theo tình trạng nghiệp vụ, giúp các bộ phận liên quan có thể tra cứu và theo dõi quá trình xử lý đơn hàng.
+Hoàn tất hoặc hủy đơn hàng: khi đơn hàng được xử lý đầy đủ, nhân viên cập nhật trạng thái hoàn tất trên hệ thống. Trong trường hợp khách hàng yêu cầu hủy hoặc đơn hàng không thể tiếp tục xử lý, nhân viên thực hiện yêu cầu hủy đơn theo quyền hạn được cấp. Hệ thống lưu lại thời gian, người thực hiện và lý do hủy để phục vụ kiểm tra và đối soát sau này.
+3.1.2. Yêu cầu chức năng và phi chức năng
+Yêu cầu chức năng:
+1. Vai trò: Nhân viên kinh doanh
+Quản lý thông tin khách hàng: tìm kiếm/tra cứu theo mã KH, tên hoặc liên hệ; tạo mới hồ sơ khách hàng khi phát sinh khách hàng chưa có; cập nhật thông tin khi có thay đổi.
+Tiếp nhận yêu cầu dịch vụ: tiếp nhận yêu cầu từ khách hàng; nhập thông tin người gửi, người nhận, địa chỉ lấy/giao hàng, thông tin hàng hóa/kiện hàng; ghi nhận loại dịch vụ khách hàng yêu cầu.
+Quản lý đơn hàng/dịch vụ: tạo mới đơn hàng trên hệ thống dựa trên yêu cầu khách hàng; hệ thống tự động cấp mã đơn hàng để tra cứu và liên kết với các hệ thống khác; cập nhật/điều chỉnh thông tin đơn hàng khi chưa xử lý ở bước tiếp theo; tra cứu thông tin và lịch sử xử lý đơn hàng.
+Xác nhận đơn hàng: kiểm tra tính đầy đủ, chính xác trước khi xác nhận; xác nhận để chuyển bước xử lý tiếp theo; ghi nhận trường hợp cần bổ sung/điều chỉnh.
+Theo dõi đơn hàng: theo dõi trạng thái xử lý; tra cứu theo mã đơn hàng, khách hàng hoặc thời gian tạo đơn; cung cấp thông tin cho bộ phận liên quan khi cần.
+Hủy đơn hàng: tiếp nhận yêu cầu hủy từ khách hàng; kiểm tra điều kiện hủy theo quy định doanh nghiệp; cập nhật trạng thái hủy và ghi nhận lý do hủy.
+2. Vai trò: Quản lý kinh doanh
+Quản lý đơn hàng: theo dõi danh sách/trạng thái các đơn hàng; kiểm tra đơn hàng bất thường/cần xử lý; theo dõi tình hình tiếp nhận và xử lý đơn hàng của bộ phận kinh doanh.
+Báo cáo đơn hàng: xem báo cáo số lượng đơn hàng theo ngày/tuần/tháng; theo dõi tình hình theo khách hàng và loại dịch vụ; theo dõi đơn hàng đang chờ xử lý hoặc cần bổ sung thông tin.
+Yêu cầu phi chức năng:
+Hiệu suất: hệ thống đáp ứng nhanh các thao tác tạo, cập nhật, tra cứu đơn hàng, hạn chế thời gian chờ khi tiếp nhận yêu cầu khách hàng.
+Bảo mật và phân quyền: chỉ người dùng được cấp quyền mới có thể tạo/cập nhật/quản lý thông tin đơn hàng; NV kinh doanh thao tác trên đơn hàng thuộc phạm vi công việc, quản lý kinh doanh có quyền theo dõi và quản lý tổng thể.
+Toàn vẹn dữ liệu: thông tin đơn hàng phải được kiểm tra trước khi lưu, hạn chế thiếu thông tin người gửi, người nhận, địa chỉ, hàng hóa.
+Tính liên thông: dữ liệu đơn hàng phải được sử dụng bởi các hệ thống cốt lõi khác, đặc biệt Quản lý nhập kho, Quản lý điều phối & giao hàng và Quản lý đối soát công nợ & COD.
+Tính truy vết: hệ thống lưu lịch sử tạo và cập nhật đơn hàng phục vụ tra cứu, kiểm tra, đối soát.
+3.1.3. Đặc tả hệ thống
+Usecase tổng quát quản lý đơn hàng/dịch vụ:
+
+Chức năng tạo đơn hàng
+Đặc tả
+Usecase
+Tạo đơn hàng
+Actor
+Nhân viên kinh odanh, Quản lí kinh doanh, hệ thống ERP
+Mô tả
+Cho phép nhân viên kinh doanh tiếp nhận yêu cầu sử dụng dịch vụ giao nhận – vận tải của khách hàng, nhập các thông tin cần thiết để tạo đơn hàng. Hệ thống ERP kiểm tra thông tin, tự động cấp mã đơn hàng và lưu đơn hàng vào hệ thống để phục vụ các bước xử lý tiếp theo.
+Điều kiện
+Khách hàng đã cung cấp đầy đủ thông tin về yêu cầu sử dụng dịch vụ.Nhân viên kho đã đăng nhập thành công vào hệ thống ERP trên thiết bị (PC hoặc Handheld).
+ Nhân viên kinh doanh đã đăng nhập thành công vào hệ thống ERP và được cấp quyền tạo đơn hàng.
+Thông tin người gửi, người nhận, địa chỉ lấy – giao hàng và hàng hóa/kiện hàng đã được xác định.
+Luồng  chính
+Nhân viên kinh doanh nhập thông tin khách hàng, người gửi, người nhận và hàng hóa..
+Hệ thống kiểm tra và lưu thông tin đơn hàng, tự động cấp mã đơn.
+Nhân viên kinh doanh gửi đơn hàng để Quản lí kinh doanh kiểm duyệt
+Quản lí kinh doanh kiểm tra thông tin và thực hiện “Kiểm duyệt đơn hàng”
+Hệ thống cập nhật trạng thái đơn hàng và thông báo kết quả kiểm duyệt
+Đơn hàng được chuyển sang các bước xử lí tiếp theo
+Luồng phụ
+Quản lí từ chối: Đơn hàng được trả về cho nhân viên kinh doanh để bổ sung/ chỉnh sửa
+Thông tin không hợp lệ: Hệ thống yêu cầu Nhân viên kinh doanh cập nhật lại trước khi gửi kiểm duyệt
+
+
+Biểu đồ hoạt động - Chức năng tạo đơn hàng
+
+Biểu đồ tuần tự - Chức năng tạo đơn hàng
+
+Chức năng xem báo cáo đơn hàng
+Đặc tả
+Usecase
+Xem báo cáo đơn hàng
+Actor
+Quản lí kinh doanh, hệ thống ERP
+Mô tả
+Cho phép quản lý kinh doanh xem và theo dõi báo cáo về tình hình đơn hàng theo thời gian, khách hàng và loại dịch vụ.
+Điều kiện
+Quản lý kinh doanh đã đăng nhập và được cấp quyền xem báo cáo.
+Hệ thống có dữ liệu đơn hàng
+Luồng  chính
+ Quản lý kinh doanh chọn chức năng “Xem báo cáo đơn hàng”.Hệ thống kiểm tra và lưu thông tin đơn hàng, tự động cấp mã đơn.
+ Quản lý nhập tiêu chí báo cáo như thời gian, khách hàng hoặc loại dịch vụ.
+Hệ thống truy vấn và tổng hợp dữ liệu đơn hàng từ CSDL
+Hệ thống hiển thị báo cáo số lượng và tình hình xử lí đơn hàng
+Quản lí kinh doanh xem và theo dõi báo cáo
+Luồng phụ
+Không có dữ liệu: Hệ thống thông báo không có đơn hàng phù hợp với tiêu chí đã chọn
+Tiêu chí không hợp lệ: Hệ thống yêu cầu Quản lí nhập lại thông tin tìm kiếm
+Biểu đồ hoạt động - Chức năng xem báo cáo đơn hàng
+
+Biểu đồ tuần tự - Chức năng xem báo cáo đơn hàng
+
+Biểu đồ lớp
+
+3.1.4. Xây dựng CSDL
+Bảng 1: KhachHang
+Thuộc tính
+Kiểu dữ liệu
+Kích thước
+Khóa
+Mô tả
+maKhachHang
+VARCHAR
+20
+PK
+Mã khách hàng
+tenKhachHang
+VARCHAR
+100
+
+Tên khách hàng
+soDienThoai
+VARCHAR
+10
+
+Số điện thoại
+diachi
+VARCHAR
+255
+
+Địa chỉ khách hàng 
+
+Bảng 2: DichVu
+Thuộc tính
+Kiểu dữ liệu
+Kích thước
+Khóa
+Mô tả
+maDichVu
+VARCHAR
+20
+PK
+Mã dịch vụ
+tenDichVu
+VARCHAR
+100
+
+Tên gói dịch vụ 
+
+Bảng 3: DonHang
+Thuộc tính
+Kiểu dữ liệu
+Kích thước
+Khóa
+Mô tả
+maDonHang
+VARCHAR
+10
+PK
+Mã đơn hàng
+maKhachHang
+VARCHAR
+10
+FK
+Khóa ngoại tham chiếu đến bảng KhachHang
+maDichVu
+VARCHAR
+10
+FK
+Khóa ngoại tham chiếu đến bảng DichVu
+ngayTao
+DATETIME
+-
+
+Thời điểm tạo đơn hàng
+nguoiGui
+VARCHAR
+100
+
+Tên người gửi hàng
+nguoiNhan
+VARCHAR
+100
+
+Tên người nhận hàng
+diachiLayHang
+VARCHAR
+255
+
+Địa chỉ tiếp nhận hàng hóa
+diachiGiaoHang
+VARCHAR
+255
+
+Địa chỉ giao hàng
+trangThai
+VARCHAR
+50
+
+Trạng thái hiện tại của đơn hàng
+lyDoHuy
+VARCHAR
+300
+
+Lý do hủy đơn hàng
+
+Bảng 4:HangHoa
+Thuộc tính
+Kiểu dữ liệu
+Kích thước
+Khóa
+Mô tả
+maHangHoa
+VARCHAR
+10
+PK
+Mã hàng hóa
+maDonHang
+VARCHAR
+10
+FK
+Khóa ngoại tham chiếu đến bảng DonHang
+loaiHangHoa
+VARCHAR
+50
+
+Phân loại hành hóa
+soLuong
+INT
+10
+
+Số lượng hàng hóa
+trongLuong
+DOUBLE
+
+
+Trọng lượng của hàng hóa
+
+
+3.2. Hệ thống quản lý nhập - xuất kho
+3.2.1. Mô tả nghiệp vụ hệ thống
+Nghiệp vụ Quản lý nhập - xuất kho là phân hệ cốt lõi và đóng vai trò huyết mạch trong cấu trúc Kho vận (WMS) của hệ thống ERP tại Hoàng Minh Logistics. Do đặc thù doanh nghiệp cung cấp dịch vụ vận tải và logistics, hệ thống này quản lý trực tiếp kho trung chuyển – nơi tập kết, phân loại, lưu trữ tạm thời và điều phối hàng hóa trước khi đưa đi phân phối hoặc giao nhận tuyến cuối, thay vì quản lý kho nguyên vật liệu sản xuất thông thường.
+Quy trình vận hành toàn diện của hệ thống bao gồm hai luồng nghiệp vụ chính:
+Quy trình nhập kho:
+Tiếp nhận thông tin: Khi hàng hóa từ tuyến xe tải liên tỉnh hoặc khách hàng vận chuyển đến kho trung chuyển, thủ kho tra cứu thông tin đơn hàng/lệnh vận chuyển đã được phê duyệt sẵn trên hệ thống ERP (thừa hưởng dữ liệu từ Phân hệ Kinh doanh). 
+Kiểm đếm và kiểm tra thực tế: Thủ kho trực tiếp kiểm tra tình trạng bên ngoài, số lượng, quy cách và chất lượng hàng hóa; trường hợp cần thiết phối hợp với bộ phận kiểm soát chất lượng (KCS/QC). 
+Lập phiếu nhập kho: Sau khi xác nhận dữ liệu thực tế khớp đúng với chứng từ, thủ kho lập Phiếu nhập kho điện tử, bao gồm: mã đơn hàng, thông tin khách hàng/nhà cung cấp, mã hàng, số lượng thực nhập, số lô, tình trạng hàng và ghi chú phát sinh. 
+Cập nhật tồn kho & liên thông kế toán: Hệ thống tự động cập nhật tăng số lượng tồn tạm thời (real-time) tại kho trung chuyển, đồng thời chuyển dữ liệu liên thông sang Phân hệ Tài chính - Kế toán để ghi nhận chi phí lưu kho hoặc đối soát công nợ liên quan. 
+Sắp xếp vị trí kho (Put-away): Hàng hóa được phân bổ vào khu vực/dãy kệ/vị trí ô-pallet cụ thể (gắn mã vạch/QR) để tiện tra cứu, kiểm kê và xuất kho ở các ca tiếp theo. 
+Quy trình xuất kho:
+Tiếp nhận lệnh xuất: Dựa trên kế hoạch điều phối giao hàng tuyến cuối hoặc yêu cầu trả hàng, hệ thống tiếp nhận lệnh xuất kho được chuyển từ phân hệ Điều vận/Kinh doanh.
+Lập danh sách soạn hàng (Picking List): Hệ thống tự động gợi ý vị trí lưu trữ tối ưu trong kho trung chuyển để nhân viên kho tiến hành lấy hàng (picking) theo lộ trình ngắn nhất.
+Kiểm tra và đóng gói: Hàng hóa sau khi soạn được kiểm tra đối chiếu lại với lệnh xuất, tiến hành đóng gói theo tiêu chuẩn và dán mã vận đơn.
+Lập phiếu xuất kho & trừ tồn kho: Thủ kho lập Phiếu xuất kho điện tử trên hệ thống. Hệ thống tự động cập nhật giảm số lượng tồn kho (real-time), đồng thời chuyển trạng thái đơn hàng sang giai đoạn giao vận tuyến cuối và liên thông dữ liệu sang kế toán.
+3.2.2. Yêu cầu chức năng và phi chức năng
+Yêu cầu chức năng:
+1. Vai trò: Người quản lý kho
+Quản lý phiếu nhập/ xuất (kiểm tra & phê duyệt): xem xét, phê duyệt/từ chối phiếu nhập kho có giá trị lớn hoặc sai lệch/phát sinh so với đơn hàng gốc; theo dõi lịch sử phê duyệt và trạng thái xử lý toàn bộ phiếu nhập trong ngày.
+Theo dõi nhập - xuất kho: Dashboard tổng quan theo dõi tiến độ hàng về kho trung chuyển real-time (đã về/đang chờ nhập/đã hoàn tất put-away).
+Báo cáo nhập kho: báo cáo tổng hợp theo ngày/tuần/tháng, báo cáo hàng trễ hạn, báo cáo hiệu suất theo từng nhân viên khai thác.
+2. Vai trò: Nhân viên kho
+Lập phiếu nhập/ xuất kho: tạo mới trên hệ thống dựa trên mã đơn hàng/chứng từ vận chuyển; nhập liệu hoặc quét mã vạch/QR để tự động điền thông tin, tránh sai sót thủ công.
+Cập nhật trạng thái thực tế: cập nhật trạng thái, số lượng thực tế, ghi nhận trường hợp thừa/thiếu/hư hỏng trong quá trình vận chuyển tuyến đầu.
+Kiểm tra và xác nhận: ghi nhận kết quả kiểm đếm thực tế, đính kèm biên bản/hình ảnh minh chứng hàng lỗi/đạt chuẩn trước khi cho phép nhập kho.
+Tra cứu lịch sử: tra cứu lịch sử theo mã đơn hàng, tên khách hàng, ngày nhập hoặc mã nhân viên thực hiện, phục vụ đối soát.
+Yêu cầu phi chức năng:
+Hiệu suất: tốc độ phản hồi khi quét mã vạch/lưu phiếu nhập dưới 2 giây, tránh ùn tắc tại cửa kho.
+Bảo mật và phân quyền: chỉ nhân viên kho được cấp quyền mới xác nhận hoàn tất phiếu nhập/ xuất.
+Tính sẵn sàng: hoạt động ổn định 24/7, hỗ trợ thiết bị di động cầm tay (Handheld/PDA) cho nhân viên kho thao tác tại hiện trường.
+3.2.3. Đặc tả hệ thống
+Usecase tổng quát của quản lý nhập kho:
+
+
+Chức năng lập và cập nhật phiếu nhập kho
+Đặc tả
+Usecase
+Lập và cập nhật phiếu nhập kho
+Actor
+Nhân viên kho, người quản lí kho, hệ thống ERP
+Mô tả
+Cho phép nhân viên kho tra cứu đơn hàng, kiểm đếm thực tế hàng hóa tại kho trung chuyển, lập phiếu nhập kho điện tử và gửi yêu cầu phê duyệt lên quản lý kho để cập nhật vào hệ thống tồn kho.
+Điều kiện
+Hàng hóa đã vận chuyển đến kho trung chuyển của Hoàng Minh Logistics.
+Nhân viên kho đã đăng nhập thành công vào hệ thống ERP trên thiết bị (PC hoặc Handheld).
+Đơn hàng/Lệnh vận chuyển gốc đã được phê duyệt ở Phân hệ Kinh doanh.
+Luồng  chính
+Nhân viên kho nhập hoặc quét mã đơn hàng (mã PO) để tra cứu thông tin trên giao diện ERP.
+Hệ thống truy vấn dữ liệu từ CSDL và hiển thị thông tin chi tiết đơn hàng lên màn hình.
+Nhân viên kho tiến hành kiểm tra thực tế hàng hóa (số lượng, quy cách, chất lượng).
+Nếu hàng hóa đạt chuẩn, nhân viên kho chọn chức năng "Lập phiếu nhập kho" và nhập các thông số thực tế.
+Hệ thống lưu tạm phiếu nhập kho vào CSDL và gửi yêu cầu phê duyệt đến Quản lý kho.
+Quản lý kho xem xét thông tin phiếu nhập, thực hiện "Phê duyệt phiếu nhập".
+Hệ thống ghi nhận trạng thái đã duyệt, tự động cập nhật tăng số lượng tồn kho (real-time) vào CSDL và thông báo xác nhận thành công về giao diện.
+
+Luồng phụ
+Bước 4 (Hàng hóa không đạt chuẩn - Thừa/Thiếu/Hư hỏng): Nhân viên kho chọn chức năng "Lập biên bản", hệ thống ghi nhận biên bản sự cố vào CSDL và kết thúc quy trình xử lý lô hàng lỗi để chờ xử lý tiếp theo.
+Bước 6 (Quản lý từ chối): Quản lý kho chọn "Từ chối phiếu nhập" kèm lý do, hệ thống trả lại trạng thái cho nhân viên kho chỉnh sửa lại.
+
+
+Biểu đồ hoạt động - Chức năng lập và cập nhật phiếu nhập kho
+Biểu đồ tuần tự -Chức năng lập phiếu nhập kho
+
+Chức năng báo cáo nhập kho
+Đặc tả
+Usecase
+Báo cáo nhập kho
+Actor
+Người quản lí kho, hệ thống ERP
+Mô tả
+Cho phép quản lý kho thống kê, xem trực quan và xuất các báo cáo tổng hợp về tình hình nhập hàng tại kho trung chuyển theo các tiêu chí lọc linh hoạt.
+Điều kiện
+Người dùng phải đăng nhập vào hệ thống ERP với tài khoản có quyền "Quản lý kho" hoặc "Ban giám đốc".
+Đã có dữ liệu các phiếu nhập kho được lưu trữ trong CSDL.
+Luồng  chính
+Quản lý kho truy cập vào mục "Báo cáo kho" và chọn phân mục "Báo cáo nhập kho".
+Hệ thống hiển thị giao diện bộ lọc (chọn khoảng thời gian từ ngày... đến ngày..., mã kho, hoặc nhân viên thực hiện).
+Quản lý kho nhập các tiêu chí lọc và nhấn nút "Xem báo cáo".
+Hệ thống truy vấn CSDL, tổng hợp số liệu (tổng số lượng nhập, tổng số đơn, tỷ lệ hàng đạt/lỗi) và hiển thị biểu đồ thống kê lên màn hình.
+Quản lý kho xem xét số liệu và có thể chọn chức năng "Xuất Excel" hoặc "In báo cáo PDF" nếu cần lưu trữ.
+Hệ thống tạo tệp báo cáo và tải xuống thiết bị của người dùng.
+Luồng phụ
+Bước 4 (Không có dữ liệu trong khoảng thời gian chọn): Hệ thống hiển thị thông báo "Không tìm thấy dữ liệu phù hợp với điều kiện lọc" và gợi ý chọn lại mốc thời gian khác.
+Biểu đồ hoạt động - Chức năng báo cáo nhập kho
+
+Biểu đồ tuần tự -Chức năng báo cáo nhập kho
+
+Biểu đồ lớp
+
+3.2.4. Xây dựng CSDL
+Bảng PHIEU_NHAP
+Thuộc tính
+Kiểu dữ liệu
+Kích thước
+Khóa
+Mô tả
+maPhieuNhap
+VARCHAR
+20
+PK
+Mã phiếu nhập
+maNCC
+VARCHAR
+20
+FK
+Mã nhà cung cấp
+maNV
+VARCHAR
+20
+FK
+Mã nhân viên lập phiếu
+ngayNhap
+DATE
+-
+
+Ngày nhập kho
+trangThai
+VARCHAR
+30
+
+Trạng thái phiếu nhập
+tongTien
+DECIMAL
+15,2
+
+Tổng giá trị phiếu nhập
+ghiChu
+VARCHAR
+255
+
+Ghi chú
+
+Bảng CHI_TIET_PHIEU_NHAP
+Thuộc tính
+Kiểu dữ liệu
+Kích thước
+Khóa
+Mô tả
+maPhieuNhap
+VARCHAR
+20
+PK, FK
+Mã phiếu nhập
+maSP
+VARCHAR
+20
+PK, FK
+Mã sản phẩm
+soLuong
+INT
+-
+
+Số lượng nhập
+donGia
+DECIMAL
+15,2
+
+Đơn giá nhập
+thanhTien
+DECIMAL
+15,2
+
+Thành tiền
+
+Bảng PHIEU_XUAT
+Thuộc tính
+Kiểu dữ liệu
+Kích thước
+Khóa
+Mô tả
+maPhieuXuat
+VARCHAR
+20
+PK
+Mã phiếu xuất
+maNV
+VARCHAR
+20
+FK
+Mã nhân viên lập phiếu
+maDonHang
+VARCHAR
+20
+FK
+Mã đơn hàng liên quan
+ngayXuat
+DATE
+-
+
+Ngày xuất kho
+lyDoXuat
+VARCHAR
+255
+
+Lý do xuất
+trangThai
+VARCHAR
+30
+
+Trạng thái phiếu xuất
+tongTien
+DECIMAL
+15,2
+
+Tổng giá trị phiếu xuất
+ghiChu
+VARCHAR
+255
+
+Ghi chú
+
+Bảng CHI_TIET_PHIEU_XUAT
+Thuộc tính
+Kiểu dữ liệu
+Kích thước
+Khóa
+Mô tả
+maPhieuXuat
+VARCHAR
+20
+PK, FK
+Mã phiếu xuất
+maSP
+VARCHAR
+20
+PK, FK
+Mã sản phẩm
+soLuong
+INT
+-
+
+Số lượng xuất
+donGia
+DECIMAL
+15,2
+
+Đơn giá
+thanhTien
+DECIMAL
+15,2
+
+Thành tiền
+
+Bảng PHIEU_KIEM_KE
+Thuộc tính
+Kiểu dữ liệu
+Kích thước
+Khóa
+Mô tả
+maPhieuKiemKe
+VARCHAR
+20
+PK
+Mã phiếu kiểm kê
+ngayKiemKe
+DATE
+-
+
+Ngày kiểm kê
+khuVucKiemKe
+VARCHAR
+100
+
+Khu vực kiểm kê
+maNV
+VARCHAR
+20
+FK
+Nhân viên thực hiện
+trangThai
+VARCHAR
+30
+
+Trạng thái kiểm kê
+ghiChu
+VARCHAR
+255
+
+Ghi chú
+
+Bảng CHI_TIET_KIEM_KE
+Thuộc tính
+Kiểu dữ liệu
+Kích thước
+Khóa
+Mô tả
+maPhieuKiemKe
+VARCHAR
+20
+PK, FK
+Mã phiếu kiểm kê
+maSP
+VARCHAR
+20
+PK, FK
+Mã sản phẩm
+soLuongHeThong
+INT
+-
+
+Số lượng theo hệ thống
+soLuongThucTe
+INT
+-
+
+Số lượng thực tế
+chenhLech
+INT
+-
+
+Chênh lệch giữa thực tế và hệ thống
+ghiChu
+VARCHAR
+255
+
+Ghi chú kiểm kê
+
+Bảng TON_KHO
+Thuộc tính
+Kiểu dữ liệu
+Kích thước
+Khóa
+Mô tả
+maTonKho
+VARCHAR
+20
+PK
+Mã tồn kho
+maSP
+VARCHAR
+20
+FK
+Mã sản phẩm
+soLuongTon
+INT
+-
+
+Số lượng hiện còn trong kho
+ngayCapNhat
+DATETIME
+-
+
+Thời điểm cập nhật gần nhất
+
+Bảng SAN_PHAM
+Thuộc tính
+Kiểu dữ liệu
+Kích thước
+Khóa
+Mô tả
+maSP
+VARCHAR
+20
+PK
+Mã sản phẩm
+tenSP
+VARCHAR
+150
+
+Tên sản phẩm
+donViTinh
+VARCHAR
+50
+
+Đơn vị tính
+gia
+DECIMAL
+15,2
+
+Giá sản phẩm
+trangThai
+VARCHAR
+30
+
+Trạng thái sản phẩm
+
+Bảng NHAN_VIEN
+Thuộc tính
+Kiểu dữ liệu
+Kích thước
+Khóa
+Mô tả
+maNV
+VARCHAR
+20
+PK
+Mã nhân viên
+hoTen
+VARCHAR
+100
+
+Họ tên
+soDienThoai
+VARCHAR
+15
+
+Số điện thoại
+email
+VARCHAR
+100
+
+Email
+chucVu
+VARCHAR
+50
+
+Chức vụ
+trangThai
+VARCHAR
+30
+
+Trạng thái làm việc
+
+Bảng DON_HANG
+Thuộc tính
+Kiểu dữ liệu
+Kích thước
+Khóa
+Mô tả
+maDonHang
+VARCHAR
+20
+PK
+Mã đơn hàng
+ngayDat
+DATE
+-
+
+Ngày đặt hàng
+trangThai
+VARCHAR
+30
+
+Trạng thái đơn hàng
+tongTien
+DECIMAL
+15,2
+
+Tổng giá trị đơn hàng
+
+3.3. Hệ thống Quản lý điều phối & giao hàng
+3.3.1. Mô tả nghiệp vụ hệ thống
+Nghiệp vụ quản lý Điều phối & Giao hàng là mắt xích trung tâm trong chuỗi luân chuyển dữ liệu của hệ thống ERP tại Hoàng Minh Logistics. Đây là phân hệ đóng vai trò cầu nối giữa hoạt động kho (WMS) và khâu hoàn tất dịch vụ, đồng thời là đầu mối cung cấp dữ liệu thực tế cho các phân hệ Tài chính - Kế toán và Quản trị nhân sự (HRM).
+Quy trình vận hành:
+Tiếp nhận đơn hàng và trạng thái hàng: khi hàng hóa sẵn sàng vận chuyển (sau kiểm đếm tại kho trung chuyển hoặc đã lấy từ khách hàng), hệ thống tự động truyền dữ liệu từ Phân hệ Quản lý Đơn hàng và WMS sang phân hệ vận tải. NV điều phối nhận danh sách lệnh vận chuyển kèm khối lượng, kích thước, điểm giao/nhận, thời gian yêu cầu.
+Lập kế hoạch và phân luồng vận chuyển (kết nối HRM): NV điều phối xây dựng phương án tuyến đường và lịch trình tối ưu; hệ thống tham chiếu Phân hệ HRM để kiểm tra danh sách tài xế, phụ xe, bằng cấp, chứng chỉ, lịch làm việc và thời gian nghỉ ngơi hợp pháp, hỗ trợ đề xuất phân công phù hợp.
+Phân công phương tiện và thiết bị: NV điều phối gán xe vận tải và thiết bị hỗ trợ cho từng chuyến; hệ thống ghi nhận thời gian bắt đầu nhiệm vụ và đẩy lộ trình, danh sách đơn hàng lên app di động của tài xế.
+Theo dõi thực tế và cập nhật trạng thái đa chiều: trong suốt hành trình, hệ thống nhận thông tin từ phương tiện và báo cáo mốc trạng thái từ tài xế (đã lấy hàng, đang trung chuyển, gặp sự cố, đến điểm giao); đồng bộ về Phân hệ Đơn hàng (cập nhật cho CSKH) và WMS (ghi nhận hàng rời kho).
+Xác nhận hoàn tất và đồng bộ dữ liệu tài chính – nhân sự: khi giao thành công và tài xế gửi biên bản giao nhận (chữ ký điện tử, ảnh chụp), phân hệ Vận tải tự động chuyển dữ liệu sang Tài chính – Kế toán để ghi nhận doanh thu, đối soát chi phí phát sinh (cầu đường, thuê xe ngoài…).
+3.3.2. Yêu cầu chức năng và phi chức năng
+Yêu cầu chức năng:
+Vai trò quản lý điều phối
+Phê duyệt & giám sát kế hoạch: xem xét, phê duyệt/yêu cầu điều chỉnh phương án điều phối và phân công trong trường hợp đơn hàng đột xuất, xe hỏng, khách hàng đổi lịch trình.
+Vai trò nhân viên điều phối
+Lập kế hoạch và phân luồng: tạo và tối ưu tuyến đường dựa trên dữ liệu đơn hàng và tình trạng hàng từ WMS; gợi ý tuyến đường thông minh tích hợp bản đồ số.
+Phân công tài xế và phương tiện (tích hợp HRM): chỉ định tài xế, phụ xe, phương tiện cho từng chuyến; hệ thống cảnh báo nếu tài xế trùng lịch, thiếu chứng chỉ, làm quá giờ quy định.
+Cập nhật và xử lý sự cố vận tải: ghi nhận, xử lý tình huống phát sinh (tai nạn, ách tắc, mất hàng, khiếu nại); điều động xe thay thế hoặc đổi lộ trình kịp thời.
+Tra cứu lịch sử giao hàng: theo mã vận đơn, biển số xe, ngày giờ, khách hàng, phục vụ đối soát nội bộ và với đối tác thứ ba.
+Vai trò nhân viên giao hàng, tài xế
+Nhận nhiệm vụ và lộ trình: qua app/thiết bị cầm tay, nhận danh sách điểm giao/nhận, địa chỉ, thời gian yêu cầu, ghi chú hàng hóa, lộ trình tối ưu.
+Cập nhật trạng thái thực tế: báo cáo mốc quan trọng theo thời gian thực.
+Xác nhận kết quả giao/nhận: hình chụp xác nhận hoặc mã đơn hàng tại từng điểm.
+Báo cáo sự cố tại hiện trường: hàng hư/thừa/thiếu, khách vắng mặt/từ chối nhận, tai nạn — gửi cảnh báo và hình ảnh, yêu cầu hỗ trợ/phê duyệt phương án thay thế.
+Tra cứu lịch sử giao hàng cá nhân: quãng đường, thời gian làm việc, cước phụ thu, đối chiếu bảng lương/hoa hồng từ HRM.
+Yêu cầu phi chức năng:
+Hiệu suất tích hợp: thao tác cập nhật trạng thái/phản hồi lên giao diện điều phối dưới 2 giây; hỗ trợ xử lý đồng thời hàng trăm thiết bị đầu cuối và phương tiện.
+Bảo mật và phân quyền: quyền xác nhận hoàn tất chuyến và phê duyệt phát sinh chỉ dành NV điều phối và quản lý được ủy quyền; tài xế chỉ xem nhiệm vụ và cập nhật mốc giao nhận; dữ liệu đồng bộ sang kế toán/HRM chỉ đọc/ghi sổ, không can thiệp tiến trình vận tải.
+Tính sẵn sàng và đa nền tảng: hoạt động 24/7, kết nối liên tục giữa các phân hệ (API); app tài xế hỗ trợ cả trực tuyến/ngoại tuyến, tự đồng bộ khi có mạng lại.
+3.3.3. Đặc tả hệ thống
+Usecase tổng quát quản lý điều phối và giao hàng:
+
+Chức năng lập kế hoạch và phân luồng tuyến đường
+Đặc tả
+Usecase
+Lập kế hoạch và phân luồng tuyến đường
+Actor
+Nhân viên điều phối
+Mục đích
+Cho phép nhân viên điều phối tạo mới một kế hoạch vận chuyển để sắp xếp lộ trình, phương tiện và nhân sự giao hàng.
+Điều kiện
+Nhân viên điều phối đã đăng nhập và đang ở màn hình "Quản lý kế hoạch vận chuyển".
+Mô tả
+Nhân viên điều phối nhập các thông tin của kế hoạch vận chuyển (như tuyến đường, phương tiện, tài xế, danh sách đơn hàng, thời gian dự kiến...) vào biểu mẫu. Hệ thống xác thực dữ liệu và lưu kế hoạch mới vào cơ sở dữ liệu.
+Luồng sự kiện
+- Tác nhân bấm chọn nút "Tạo kế hoạch mới" trên giao diện.
+- Hệ thống hiển thị biểu mẫu (form) nhập thông tin kế hoạch vận chuyển.
+- Tác nhân điền đầy đủ thông tin vào các trường yêu cầu và bấm nút "Lưu".
+- Hệ thống tiếp nhận, kiểm tra tính hợp lệ của dữ liệu vừa nhập.
+- Hệ thống truy vấn cơ sở dữ liệu để lưu bản ghi kế hoạch mới.
+- Hệ thống hiển thị thông báo tạo thành công và tải lại danh sách kế hoạch vận chuyển.
+Luồng thay thế
+- Nếu dữ liệu nhập không hợp lệ (thiếu trường bắt buộc, sai định dạng, xe/tài xế trùng lịch...), hệ thống hiển thị thông báo lỗi tương ứng và yêu cầu tác nhân nhập lại.
+- Nếu tác nhân bấm "Hủy", hệ thống thoát biểu mẫu và không lưu dữ liệu.
+Hậu điều kiện
+Kế hoạch vận chuyển mới được lưu thành công và xuất hiện trong danh sách kế hoạch.
+
+Biểu đồ hoạt động - Chức năng lập kế hoạch và phân luồng tuyến đường
+
+Biểu đồ tuần tự - Chức năng lập kế hoạch và phân luồng tuyến đường
+
+Chức năng xác nhận kết quả giao và nhận hàng hoá
+Đặc tả
+Usecase
+Xác nhận nhận đơn hàng
+Actor
+Nhân viên
+Mục đích
+Ghi nhận việc Nhân viên tiếp nhận đơn hàng tại kho/bưu cục để bắt đầu đi giao.
+Điều kiện
+Nhân viên đã đăng nhập vào hệ thống và đơn hàng đang ở trạng thái "Chờ tiếp nhận".
+Mô tả
+- Nhân viên đăng nhập vào hệ thống, truy cập chức năng "Quản lý giao nhận hàng".
+- Hệ thống hiển thị danh sách các đơn hàng được phân công.
+- Nhân viên chọn đơn hàng và bấm "Xác nhận nhận đơn hàng" để chuyển trạng thái sang "Đang giao hàng".
+Luồng sự kiện
+Luồng cơ bản:
+- Tác nhân đăng nhập vào hệ thống.
+- Hệ thống hiển thị giao diện trang chủ.
+- Tác nhân chọn chức năng "Quản lý giao nhận hàng".
+- Hệ thống truy vấn CSDL và hiển thị danh sách đơn hàng chờ nhận.
+- Tác nhân kiểm tra thông tin và nhấn "Xác nhận nhận đơn hàng".
+- Hệ thống cập nhật trạng thái đơn thành "Đang giao hàng" trong CSDL.
+Luồng mở rộng (Extend):
+- Đơn đã được nhận: Đơn hàng đã có nhân viên khác tiếp nhận → Hệ thống cảnh báo "Đơn hàng đã được nhận bởi nhân viên khác".
+Luồng cơ bản:
+- Tác nhân đăng nhập vào hệ thống.
+- Hệ thống hiển thị giao diện trang chủ.
+- Tác nhân chọn chức năng "Quản lý giao nhận hàng".
+- Hệ thống kiểm tra trạng thái đăng nhập, truy vấn cơ sở dữ liệu và hiển thị danh sách đơn hàng.
+- Tác nhân chọn đơn hàng, tải ảnh minh chứng và nhấn "Lưu".
+- Hệ thống lưu thông tin vào CSDL và cập nhật trạng thái đơn thành "Đã hoàn thành".
+Luồng mở rộng (Extend):
+- Thiếu hình ảnh/dữ liệu: Tác nhân không đính kèm ảnh minh chứng → Hệ thống cảnh báo lỗi và yêu cầu tải lại ảnh.
+- Đơn hàng đã hoàn thành: Tác nhân chọn nhầm đơn đã xử lý → Hệ thống thông báo đơn hàng đã được xác nhận trước đó.
+
+Biểu đồ hoạt động - Chức năng xác nhận đơn hàng
+
+
+Biểu đồ tuần tự - Chức năng xác nhận đơn hàng
+
+
+
+Đặc tả
+Usecase
+Xác nhận giao hàng thành công
+Actor
+Nhân viên
+Mục đích
+Ghi nhận đơn hàng đã được giao đến tay khách hàng, tải ảnh minh chứng/chữ ký và cập nhật hoàn thành.
+Điều kiện
+Nhân viên đã đăng nhập hệ thống và đơn hàng đang ở trạng thái "Đang giao hàng".
+Mô tả
+- Sau khi trao hàng cho khách, Nhân viên mở chi tiết đơn hàng trên ứng dụng.
+- Bấm "Xác nhận giao hàng thành công", đính kèm hình ảnh giao hàng/chữ ký khách hàng và hoàn tất đơn.
+Luồng sự kiện
+Luồng cơ bản:
+- Tác nhân đăng nhập vào hệ thống.
+- Tác nhân chọn đơn hàng đang giao trong danh sách.
+- Tác nhân bấm "Xác nhận giao hàng thành công".
+- Hệ thống hiển thị form yêu cầu đính kèm minh chứng.
+- Tác nhân tải ảnh minh chứng/chữ ký và nhấn "Lưu".
+- Hệ thống lưu vào CSDL và cập nhật trạng thái đơn thành "Đã hoàn thành".
+Luồng mở rộng (Extend):
+- Thiếu minh chứng: Tác nhân không tải ảnh giao hàng → Hệ thống yêu cầu tải bổ sung ảnh minh chứng mới cho phép hoàn tất.
+Biểu đồ hoạt động - Chức năng xác nhận giao hàng thành công
+
+Biểu đồ tuần tự - Chức năng xác nhận giao hàng thành công
+
+Biểu đồ lớp
+
+3.3.4. Xây dựng CSDL
+Bảng NguoiDung
+Thuộc tính
+Kiểu dữ liệu
+Khóa
+Ý nghĩa
+MaNguoiDung
+INT
+PK
+Mã người dùng
+HoTen
+VARCHAR(100)
+
+Họ tên
+SoDienThoai
+VARCHAR(15)
+
+Số điện thoại
+Email
+VARCHAR(100)
+
+Email
+MatKhau
+VARCHAR(255)
+
+Mật khẩu
+VaiTro
+VARCHAR(30)
+
+Quản lý / Điều phối / Tài xế
+TrangThai
+VARCHAR(20)
+
+Trạng thái tài khoản
+
+Bảng TaiXe
+
+Thuộc tính
+Kiểu dữ liệu
+Khóa
+Ý nghĩa
+MaTaiXe
+INT
+PK
+Mã tài xế
+MaNguoiDung
+INT
+FK
+Người dùng tương ứng
+SoGPLX
+VARCHAR(30)
+
+Số giấy phép lái xe
+LoaiGPLX
+VARCHAR(20)
+
+Loại bằng
+TrangThai
+VARCHAR(30)
+
+Đang hoạt động / Nghỉ / Bận
+
+Bảng PhuongTien
+Thuộc tính
+Kiểu dữ liệu
+Khóa
+Ý nghĩa
+MaPhuongTien
+INT
+PK
+Mã phương tiện
+BienSo
+VARCHAR(20)
+
+Biển số xe
+LoaiXe
+VARCHAR(50)
+
+Loại xe
+TaiTrong
+DECIMAL(10,2)
+
+Tải trọng
+TrangThai
+VARCHAR(30)
+
+Sẵn sàng / Đang chạy / Bảo trì
+
+Bảng DonHang
+Thuộc tính
+Kiểu dữ liệu
+Khóa
+Ý nghĩa
+MaDonHang
+INT
+PK
+Mã đơn hàng
+MaVanDon
+VARCHAR(30)
+FK
+Mã vận đơn
+NguoiGui
+VARCHAR(100)
+
+Người gửi
+SDTNguoiGui
+VARCHAR(15)
+
+SĐT người gửi
+NguoiNhan
+VARCHAR(100)
+
+Người nhận
+SDTNguoiNhan
+VARCHAR(15)
+
+SĐT người nhận
+DiaChiNhan
+VARCHAR(255)
+
+Địa chỉ giao
+KhoiLuong
+DECIMAL(10,2)
+
+Khối lượng
+TienCOD
+DECIMAL(15,2)
+
+Tiền COD
+PhiVanChuyen
+DECIMAL(15,2)
+
+Phí vận chuyển
+TrangThai
+VARCHAR(50)
+
+Trạng thái đơn
+NgayTao
+DATETIME
+
+Ngày tạo
+
+Bảng ChuyenVan
+Thuộc tính
+Kiểu dữ liệu
+Khóa
+Ý nghĩa
+MaChuyen
+INT
+PK
+Mã chuyến
+MaNguoiLap
+INT
+FK
+Nhân viên điều phối
+MaTaiXe
+INT
+FK
+Tài xế được phân công
+MaPhuongTien
+INT
+FK
+Xe được sử dụng
+NgayKhoiHanh
+DATETIME
+
+Thời gian khởi hành
+ThoiGianDuKien
+DATETIME
+
+Thời gian dự kiến
+ThoiGianThucTe
+DATETIME
+
+Thời gian thực tế
+TrangThai
+VARCHAR(30)
+
+Chưa chạy / Đang chạy / Hoàn thành
+
+Bảng LoTrinh
+Thuộc tính
+Kiểu dữ liệu
+Khóa
+Ý nghĩa
+MaLoTrinh
+INT
+PK
+Mã lộ trình
+MaChuyen
+INT
+FK
+Chuyến vận chuyển
+DiemXuatPhat
+VARCHAR(255)
+
+Điểm xuất phát
+DiemKetThuc
+VARCHAR(255)
+
+Điểm kết thúc
+KhoangCach
+DECIMAL(10,2)
+
+Khoảng cách
+ThoiGianDuKien
+INT
+
+Thời gian dự kiến
+MoTa
+TEXT
+
+Mô tả tuyến
+
+Bảng SuCoVanTai
+Thuộc tính
+Kiểu dữ liệu
+Khóa
+Ý nghĩa
+MaSuCo
+INT
+PK
+Mã sự cố
+MaChuyen
+INT
+FK
+Chuyến xảy ra sự cố
+MaDonHang
+INT
+FK
+Đơn hàng liên quan
+MaTaiXe
+INT
+FK
+Tài xế báo sự cố
+LoaiSuCo
+VARCHAR(50)
+
+Tai nạn, trễ, hỏng hàng, khách vắng...
+MoTa
+TEXT
+
+Nội dung sự cố
+ThoiGian
+DATETIME
+
+Thời gian xảy ra
+TrangThai
+VARCHAR(30)
+
+Chờ xử lý, đã xử lý
+
+3.4. Hệ thống Quản lý hồ sơ nhân viên
+3.4.1. Mô tả nghiệp vụ hệ thống
+Hệ thống quản lý hồ sơ nhân viên là một hệ thống con thuộc Phân hệ Nhân sự trong hệ thống ERP của Công ty Cổ phần Đầu tư Thương mại và Dịch vụ Hoàng Minh. Hệ thống có nhiệm vụ quản lý tập trung thông tin nhân viên, phục vụ công tác quản lý nhân sự và cung cấp dữ liệu cho các nghiệp vụ liên quan như chấm công, tính lương và đánh giá hiệu suất.
+Do Hoàng Minh có nhiều nhóm nhân sự như nhân viên văn phòng, nhân viên kho, điều phối viên và shipper, việc quản lý thông tin nhân viên cần được thực hiện thống nhất trên một hệ thống dùng chung.
+Hệ thống tập trung vào các nghiệp vụ chính:
+Tiếp nhận thông tin nhân viên: khi nhân viên được tuyển dụng, bộ phận Nhân sự thu thập họ tên, ngày sinh, giới tính, SĐT, địa chỉ, thông tin liên hệ, vị trí công việc và phòng ban.
+Tạo hồ sơ nhân viên: NV Nhân sự nhập thông tin và tạo hồ sơ; mỗi nhân viên được cấp mã nhân viên riêng phục vụ quản lý, tra cứu.
+Kiểm tra và cập nhật hồ sơ: kiểm tra tính đầy đủ, chính xác; khi có thay đổi thông tin cá nhân, phòng ban, chức vụ, trạng thái làm việc, hồ sơ được cập nhật.
+Tra cứu và quản lý hồ sơ: người có quyền tìm kiếm theo mã NV, họ tên, phòng ban, chức vụ hoặc trạng thái; hỗ trợ xem chi tiết và quản lý danh sách.
+Liên kết với các nghiệp vụ nhân sự khác: thông tin hồ sơ là dữ liệu đầu vào cho chấm công, tính lương, đánh giá hiệu suất trong Phân hệ Nhân sự.
+3.4.2. Yêu cầu chức năng và phi chức năng
+Yêu cầu chức năng:
+Thêm hồ sơ nhân viên: nhập và tạo mới hồ sơ.
+Xem hồ sơ nhân viên: xem thông tin chi tiết.
+Cập nhật hồ sơ: chỉnh sửa khi có thay đổi.
+Tìm kiếm hồ sơ: theo mã NV, họ tên, phòng ban, chức vụ.
+Quản lý trạng thái: theo dõi đang làm việc, nghỉ việc...
+Quản lý danh sách nhân viên: xem và quản lý danh sách.
+Liên kết dữ liệu: cung cấp thông tin cho chấm công, tính lương, hiệu suất.
+Phân quyền người dùng:
+Vai trò 1 – Nhân viên Phòng nhân sự: thêm hồ sơ, xem hồ sơ, cập nhật thông tin, tìm kiếm hồ sơ, quản lý trạng thái nhân viên, quản lý danh sách nhân viên.
+Vai trò 2 – Quản lý: như trên, đồng thời xem các thông tin cần thiết phục vụ quản lý.
+Vai trò 3 – Nhân viên: xem hồ sơ cá nhân; gửi yêu cầu cập nhật thông tin khi có thay đổi.
+Yêu cầu phi chức năng:
+Bảo mật: thông tin hồ sơ phải được bảo vệ, chỉ người có quyền mới được truy cập.
+Phân quyền: người dùng chỉ thực hiện chức năng phù hợp vai trò.
+Hiệu năng: thao tác tìm kiếm, xem, cập nhật hồ sơ phải phản hồi nhanh.
+Chính xác: dữ liệu nhân viên lưu trữ chính xác, hạn chế trùng lặp.
+Khả dụng: hệ thống phục vụ hoạt động quản lý nhân sự trong giờ làm việc.
+Khả năng tích hợp: dữ liệu hồ sơ được sử dụng bởi các hệ thống chấm công, tính lương, hiệu suất.
+3.4.3. Đặc tả hệ thống
+Usecase tổng quát quản lý hố sơ nhân viên:
+
+Chức năng thêm hồ sơ nhân viên
+Đặc tả
+Usecase
+Thêm hồ sơ nhân viên
+Actor
+Quản lý hồ sơ nhân viên và Nhân viên phòng nhân sự
+Mục đích
+Thêm mới hồ sơ nhân viên vào hệ thống
+Mô tả
+Nhân viên phòng nhân sự nhập thông tin nhân viên mới và lưu hồ sơ vào hệ thống.
+Tiền điều kiện
+Đã đăng nhập hệ thống.
+Luồng sự kiện chính
+1. Actor chọn chức năng “Thêm hồ sơ nhân viên”.
+2. Hệ thống hiển thị giao diện thêm hồ sơ nhân viên.
+3. Actor nhập thông tin nhân viên.
+4. Hệ thống kiểm tra tính hợp lệ của thông tin.
+5. Hệ thống lưu hồ sơ nhân viên vào CSDL.
+6. Hệ thống thông báo “Thêm hồ sơ nhân viên thành công”.
+Dòng thay thế
+3.1. Actor nhập thông tin thiếu hoặc sai định dạng, hệ thống thông báo lỗi và yêu cầu nhập lại thông tin.
+4.1. Nếu thông tin nhân viên đã tồn tại, hệ thống thông báo “Hồ sơ nhân viên đã tồn tại” và yêu cầu kiểm tra lại thông tin.
+Luồng sự kiện phụ
+5.1. Nếu xảy ra lỗi khi lưu dữ liệu, hệ thống thông báo “Không thể lưu hồ sơ nhân viên” và yêu cầu Actor thực hiện lại.
+
+Biểu đồ hoạt động - Chức năng thêm hồ sơ nhân viên
+
+Biểu đồ tuần tự - Chức năng thêm hồ sơ nhân viên
+
+Chức năng sửa hồ sơ nhân viên
+Usecase
+Sửa hồ sơ nhân viên
+Actor
+Quản lý hồ sơ nhân viên và Nhân viên phòng nhân sự
+Mục đích
+Sửa hồ sơ nhân viên vào hệ thống
+Mô tả
+Nhân viên phòng nhân sự sửa thông tin nhân viên và lưu hồ sơ vào hệ thống.
+Tiền điều kiện
+Đã đăng nhập hệ thống.
+Luồng sự kiện chính
+1. Actor chọn chức năng “Sửa hồ sơ nhân viên”.
+2. Hệ thống hiển thị giao diện sửa hồ sơ nhân viên.
+3. Actor sửa thông tin nhân viên.
+4. Hệ thống kiểm tra tính hợp lệ của thông tin.
+5. Hệ thống lưu hồ sơ nhân viên vào CSDL.
+6. Hệ thống thông báo “Sửa hồ sơ nhân viên thành công”.
+Dòng thay thế
+3.1. Actor nhập thông tin thiếu hoặc sai định dạng, hệ thống thông báo lỗi và yêu cầu nhập lại thông tin.
+4.1. Nếu thông tin nhân viên đã tồn tại, hệ thống thông báo “Hồ sơ nhân viên đã tồn tại” và yêu cầu kiểm tra lại thông tin.
+Luồng sự kiện phụ
+5.1. Nếu xảy ra lỗi khi lưu dữ liệu, hệ thống thông báo “Không thể lưu hồ sơ nhân viên” và yêu cầu Actor thực hiện lại.
+Biểu đồ hoạt động - Chức năng sửa hồ sơ nhân viên
+
+Biểu đồ tuần tự - Chức năng sửa hồ sơ nhân viên
+
+Biểu đồ lớp
+
+3.4.4. Xây dựng CSDL
+Bảng NhanVien
+Thuộc tính
+Kiểu dữ liệu
+Kích thước
+Khóa
+Mô tả
+maNV
+VARCHAR
+20
+PK
+Mã nhân viên
+hoTen
+VARCHAR
+100
+-
+Họ tên nhân viên
+ngaySinh
+DATE
+-
+-
+Ngày sinh
+gioiTinh
+VARCHAR
+10
+-
+Giới tính
+soDienThoai
+VARCHAR
+15
+-
+Số điện thoại
+diaChi
+VARCHAR
+255
+-
+Địa chỉ
+email
+VARCHAR
+100
+-
+Email
+maPhongBan
+VARCHAR
+20
+FK
+Mã phòng ban
+maChucVu
+VARCHAR
+20
+FK
+Mã chức vụ
+maTrangThai
+VARCHAR
+20
+FK
+Mã trạng thái nhân viên
+
+Bảng PhongBan
+Thuộc tính
+Kiểu dữ liệu
+Kích thước
+Khóa
+Mô tả
+maPhongBan
+VARCHAR
+20
+PK
+Mã phòng ban
+tenPhongBan
+VARCHAR
+100
+-
+Tên phòng ban
+
+Bảng ChucVu
+Thuộc tính
+Kiểu dữ liệu
+Kích thước
+Khóa
+Mô tả
+maChucVu
+VARCHAR
+20
+PK
+Mã chức vụ
+tenChucVu
+VARCHAR
+100
+-
+Tên chức vụ
+
+Bảng TrangThaiNhanVien
+Thuộc tính
+Kiểu dữ liệu
+Kích thước
+Khóa
+Mô tả
+maTrangThai
+VARCHAR
+20
+PK
+Mã trạng thái nhân viên
+tenTrangThai
+VARCHAR
+50
+-
+Tên trạng thái nhân viên
+
+3.5. Hệ thống Quản lý Thu/Chi - COD
+3.5.1. Mô tả nghiệp vụ hệ thống
+Nghiệp vụ Quản lý Thu/Chi - COD là một chức năng thuộc Phân hệ Tài chính - Kế toán (FI/CO) của hệ thống ERP tại Hoàng Minh Logistics. Phân hệ Tài chính - Kế toán bao gồm quản lý công nợ, quản lý thu chi - COD, quản lý hóa đơn, quản lý báo cáo tài chính và quản lý chi phí vận hành. Nghiệp vụ thu/chi - COD liên kết dữ liệu tài chính với đơn hàng, giao nhận và đối soát, phù hợp với đặc thù doanh nghiệp có hoạt động thu hộ tiền hàng và hoàn trả cho người bán.
+Quy trình vận hành:
+Tiếp nhận thông tin: hệ thống tiếp nhận dữ liệu đơn hàng đã giao và số tiền COD cần thu từ các phân hệ liên quan; kế toán tra cứu theo mã đơn hàng, khách hàng hoặc mã COD.
+Đối soát COD: kế toán đối chiếu số tiền COD phải thu với trạng thái giao hàng và dữ liệu thu tiền thực tế; các giao dịch sai lệch được đánh dấu để kiểm tra.
+Lập phiếu thu: khi xác nhận tiền COD đã thu, kế toán lập phiếu thu điện tử, ghi nhận số tiền, mã đơn hàng/COD, khách hàng, người thực hiện và nội dung giao dịch.
+Chi trả COD: sau khi đủ điều kiện đối soát, kế toán lập phiếu chi để hoàn trả tiền thu hộ cho khách hàng/đối tác; giao dịch chuyển cho thủ quỹ xác nhận thực tế.
+Cập nhật sổ quỹ và công nợ: hệ thống cập nhật trạng thái thu/chi, số dư liên quan và dữ liệu công nợ; thông tin lưu tập trung.
+Báo cáo và đối soát: kế toán và quản lý theo dõi tổng tiền COD đã thu, đã chi trả, còn phải trả, giao dịch sai lệch và lịch sử xử lý.
+3.5.2. Yêu cầu chức năng và phi chức năng
+Yêu cầu chức năng:
+1. Vai trò: Kế toán viên
+Quản lý dữ liệu COD: tra cứu đơn hàng, số tiền COD, trạng thái giao hàng và trạng thái thu/chi.
+Đối soát COD: đối chiếu theo đơn hàng, khách hàng, thời gian, trạng thái; ghi nhận sai lệch.
+Lập phiếu thu/chi: tạo, cập nhật, gửi phiếu thu/chi COD theo quy trình.
+Tra cứu và báo cáo: tìm kiếm lịch sử giao dịch, xuất báo cáo thu-chi, danh sách COD cần đối soát.
+2. Vai trò: Thủ quỹ
+Xác nhận giao dịch thu tiền và chi trả COD theo phiếu đã lập.
+Kiểm tra số tiền thực tế và cập nhật trạng thái thực hiện giao dịch.
+3. Vai trò: Kế toán trưởng
+Kiểm tra và phê duyệt các giao dịch cần kiểm soát theo quy trình.
+Theo dõi báo cáo tổng hợp, lịch sử điều chỉnh và các trường hợp sai lệch COD.
+Yêu cầu phi chức năng:
+Hiệu suất: thao tác tra cứu, lưu phiếu, cập nhật trạng thái cần thời gian phản hồi nhanh phục vụ đối soát.
+Bảo mật và phân quyền: người dùng chỉ thực hiện chức năng phù hợp vai trò; thao tác lập, xác nhận, phê duyệt phải lưu lịch sử.
+Tính toàn vẹn dữ liệu: dữ liệu thu/chi COD phải liên kết với đơn hàng và giao dịch gốc, hạn chế nhập trùng hoặc sai số tiền.
+Khả năng truy vết: lưu người thực hiện, thời gian, trạng thái và lịch sử điều chỉnh từng giao dịch.
+Tính sẵn sàng: hỗ trợ kế toán và thủ quỹ tra cứu, cập nhật dữ liệu trong quá trình vận hành.
+3.5.3. Đặc tả hệ thống
+Usecase tổng quát quản lý thu chi/COD:
+
+Chức năng cập nhật trạng thái giao dịch
+Usecase
+Cập nhật trạng thái giao dịch
+Actor
+Thủ quỹ
+Tiền điều kiện
+Thủ quỹ đã đăng nhập vào hệ thống và có quyền thực hiện chức năng cập nhật trạng thái giao dịch. Giao dịch thu/chi COD đã được lập và cần được xác nhận thực hiện.
+Hậu điều kiện
+Hệ thống cập nhật trạng thái giao dịch theo kết quả thực hiện và lưu thông tin thay đổi để phục vụ tra cứu, đối soát và báo cáo.
+Luồng sự kiện chính
+Actor
+Hệ thống
+1. Actor chọn chức năng “Cập nhật trạng thái giao dịch”.
+1. Hệ thống hiển thị danh sách các giao dịch thu/chi COD cần cập nhật trạng thái.
+2. Actor chọn giao dịch cần cập nhật.
+2. Hệ thống hiển thị thông tin giao dịch gồm mã giao dịch, mã đơn hàng/COD, số tiền và trạng thái hiện tại.
+3. Actor kiểm tra thông tin và chọn trạng thái mới phù hợp với kết quả thực hiện giao dịch.
+3. Hệ thống kiểm tra tính hợp lệ của trạng thái được chọn.
+4. Actor xác nhận cập nhật trạng thái giao dịch.
+4. Hệ thống cập nhật trạng thái giao dịch và lưu thời gian, người thực hiện cập nhật.
+
+5. Hệ thống thông báo “Cập nhật trạng thái giao dịch thành công” và hiển thị trạng thái mới.
+	Luồng sự kiện ngoại lệ
+Ngoại lệ
+Xử lí
+Actor chưa chọn giao dịch cần cập nhật
+Hệ thống thông báo “Vui lòng chọn giao dịch cần cập nhật”.
+Giao dịch không tồn tại hoặc đã bị thay đổi
+Hệ thống thông báo “Giao dịch không tồn tại hoặc dữ liệu đã thay đổi” và yêu cầu Actor kiểm tra lại.
+Trạng thái mới không hợp lệ với trạng thái hiện tại
+Hệ thống từ chối cập nhật và thông báo “Trạng thái giao dịch không hợp lệ”.
+
+Biểu đồ hoạt động - Chức năng cập nhật trạng thái giao dịch
+
+Biểu đồ tuần tự - Chức năng cập nhật trạng thái giao dịch
+
+
+Biểu đồ lớp
+
+3.5.4. Xây dựng CSDL
+Bảng 1:CongNo
+Thuộc tính
+Kiểu dữ liệu
+Kích thước
+Khóa
+Mô tả
+maCongNo
+VARCHAR
+10
+PK
+Mã công nợ
+maDoiTac
+VARCHAR
+10
+
+Mã đối tác
+soTienPhaiTra
+DOUBLE
+
+
+Số tiền phải trả
+soTienDaTra
+DOUBLE
+
+
+Số tiền đã trả
+trangThai
+VARCHAR
+20
+
+Trạng thái công nợ
+
+Bảng 2:GiaoDichCOD
+Thuộc tính
+Kiểu dữ liệu
+Kích thước
+Khóa
+Mô tả
+maGiaoDich
+VARCHAR
+10
+PK
+Mã giao dịch COD
+maDonHang
+VARCHAR
+10
+FK
+Khóa ngoại tham chiếu đến bảng DonHang
+maCOD
+VARCHAR
+10
+
+Mã COD
+soTien
+DOUBLE
+
+
+Số tiền giao dịch COD
+trangThai
+VARCHAR
+20
+
+Trạng thái giao dịch
+ngayTao
+DATE
+
+
+Ngày tạo giao dịch
+thoiGianCapNhat
+DATETIME
+
+
+Thời gian cập nhật giao dịch
+nguoiCapNhat
+VARCHAR
+20
+
+Người thực hiện cập nhật
+
+Bảng 3:PhieuThuChi
+Thuộc tính
+Kiểu dữ liệu
+Kích thước
+Khóa
+Mô tả
+maPhieu
+VARCHAR
+10
+PK
+Mã phiếu thu/chi
+loaiPhieu
+VARCHAR
+30
+
+Loại phiếu: thu hoặc chi
+soTien
+DOUBLE
+
+
+Số tiền thu/chi
+ngayLap
+DATE
+
+
+Ngày lập phiếu
+noiDung
+VARCHAR
+100
+
+Nội dung giao dịch
+trangThai
+VARCHAR
+20
+
+Trạng thái phiếu
+
+Bảng 4:DonHang
+Thuộc tính
+Kiểu dữ liệu
+Kích thước
+Khóa
+Mô tả
+maDonHang
+VARCHAR
+10
+PK
+Mã đơn hàng
+trangThaiGiaoHang
+VARCHAR
+20
+
+Trạng thái giao hàng
+soTienCOD
+DOUBLE
+
+
+Số tiền COD của đơn hàng
+
+Bảng 5:TaiKhoan
+Thuộc tính
+Kiểu dữ liệu
+Kích thước
+Khóa
+Mô tả
+maTaiKhoan
+VARCHAR
+10
+PK
+Mã tài khoản
+tenDangNhap
+VARCHAR
+50
+
+Tên đăng nhập
+matKhau
+VARCHAR
+50
+
+Mật khẩu tài khoản
+hoTen
+VARCHAR
+50
+
+Họ và tên người dùng
+vaiTro
+VARCHAR
+30
+
+Vai trò người dùng
+trangThai
+VARCHAR
+20
+
+Trạng thái tài khoản
+
+Bảng 6:SoQuy
+Thuộc tính
+Kiểu dữ liệu
+Kích thước
+Khóa
+Mô tả
+maSoQuy
+VARCHAR
+10
+PK
+Mã sổ quỹ
+soDu
+DOUBLE
+
+
+Số dư quỹ
+ngayCapNhat
+DATE
+
+
+Ngày cập nhật sổ quỹ
+
+Bảng 7:DoiSoatCOD
+Thuộc tính
+Kiểu dữ liệu
+Kích thước
+Khóa
+Mô tả
+maDoiSoat
+VARCHAR
+10
+PK
+Mã đợt đối soát COD
+ngayDoiSoat
+DATE
+
+
+Ngày thực hiện đối soát
+tongTien
+DOUBLE
+
+
+Tổng tiền đối soát
+chenhLech
+DOUBLE
+
+
+Số tiền chênh lệch
+trangThai
+VARCHAR
+20
+
+Trạng thái đối soát
+
+
+CHƯƠNG IV. XÂY DỰNG CƠ SỞ DỮ LIỆU
+4.1. Biểu đồ lớp của hệ thống
+Hệ thống 1 - Quản lý đơn hàng/dịch vụ
+1.1. KhachHang(MaKH, HoTen, SDT, Email, DiaChi, LoaiKH)
+1.2. DichVu(MaDichVu, TenDichVu, DonGia, MoTa)
+1.3. DonHang(MaDonHang, MaKH, MaDichVu, NguoiGui, NguoiNhan, DiaChiLay, DiaChiGiao, NgayTao, TrangThai, MaNVTao)
+1.4. HangHoa(MaHang, MaDonHang, MoTaHang, SoLuong, TrongLuong, KichThuoc)
+Hệ thống 2 - Quản lý nhập - xuất kho
+2.1. PHIEU_NHAP(MaPhieuNhap, MaDonHang, MaNV, NgayNhap, TrangThai, NguoiDuyet)
+2.2. CHI_TIET_PHIEU_NHAP(MaCT, MaPhieuNhap, MaHang, SoLuongThucNhap, TinhTrangHang)
+2.3. PHIEU_XUAT(MaPhieuXuat, MaDonHang, MaNV, NgayXuat, TrangThai)
+2.4. CHI_TIET_PHIEU_XUAT(MaCT, MaPhieuXuat, MaHang, SoLuongXuat)
+2.5. PHIEU_KIEM_KE(MaPhieuKK, NgayKiemKe, MaNV, GhiChu)
+2.6. CHI_TIET_KIEM_KE(MaCT, MaPhieuKK, MaHang, SoLuongTheoSo, SoLuongThucTe, ChenhLech)
+2.7. TON_KHO(MaTonKho, MaHang, MaViTri, SoLuong)
+2.8. SAN_PHAM(MaHang, TenHang, DonViTinh, DieuKienBaoQuan)
+2.9. NHAN_VIEN(MaNV, HoTen, VaiTro)
+2.10. DON_HANG(MaDonHang, TrangThai)
+Hệ thống 3 - Quản lý điều phối & giao hàng
+3.1. NguoiDung(MaND, HoTen, SDT, VaiTro)
+3.2. TaiXe(MaNV, BangLai, ChungChi, NgayHetHan)
+3.3. PhuongTien(MaPT, BienSo, LoaiXe, TrangThaiXe)
+3.4. DonHang(MaDonHang, TrangThai)
+3.5. ChuyenVan(MaChuyen, MaDonHang, MaTaiXe, MaPT, NgayGio, TrangThai)
+3.6. LoTrinh(MaLoTrinh, MaChuyen, DiemDi, DiemDen, ThoiGianDuKien)
+3.7. SuCoVanTai(MaSuCo, MaChuyen, LoaiSuCo, ThoiGian, MoTa, HinhAnh)
+Hệ thống 4 - Quản lý hồ sơ nhân viên
+4.1. NhanVien(MaNV, HoTen, NgaySinh, GioiTinh, SDT, DiaChi, MaPhongBan, MaChucVu, MaTrangThai, NgayVaoLam)
+4.2. PhongBan(MaPhongBan, TenPhongBan)
+4.3. ChucVu(MaChucVu, TenChucVu)
+4.4. TrangThaiNhanVien(MaTrangThai, TenTrangThai)
+Hệ thống 5 - Quản lý Thu/Chi - COD
+5.1. CongNo(MaCongNo, MaKH, SoDuNo, NgayCapNhat)
+5.2. GiaoDichCOD(MaGiaoDich, MaDonHang, SoTienPhaiThu, SoTienThucThu, TrangThai)
+5.3. PhieuThuChi(MaPhieu, LoaiPhieu, MaGiaoDich, SoTien, NgayLap, NguoiLap, NguoiDuyet, TrangThai)
+5.4. DonHang(MaDonHang, TrangThai)
+5.5. TaiKhoan(MaTK, TenTK, SoDu)
+5.6. SoQuy(MaSoQuy, MaTK, SoTienThu, SoTienChi, NgayGhiSo)
+5.7. DoiSoatCOD(MaDoiSoat, MaGiaoDich, ChenhLech, NguoiDoiSoat, ThoiGian)
+So sánh các lớp giữa các hệ thống, tìm lớp trùng mô tả cùng một đối tượng:
+Đối tượng thực tế
+Xuất hiện tại (lớp trùng)
+Nhận xét
+Đơn hàng
+1.3, 2.10, 3.4, 5.4
+1.3 có đầy đủ thuộc tính nhất (nơi đơn hàng được tạo ra), các lớp còn lại chỉ có MaDonHang + TrangThai
+Nhân viên
+2.9, 3.1, 4.1
+4.1 có đầy đủ thuộc tính nhất (họ tên, phòng ban, chức vụ, trạng thái); 2.9 và 3.1 chỉ có vài thuộc tính
+Hàng hóa
+1.4, 2.8
+1.4 mô tả đầy đủ hàng hóa gắn với đơn hàng gốc; 2.8 chỉ thêm 1 thuộc tính riêng của kho (DieuKienBaoQuan)
+Đơn hàng → chọn 1.3. DonHang làm bảng chính. Các lớp 2.10, 3.4, 5.4 trở thành bảng phụ, chỉ giữ lại khóa MaDonHang để liên kết.
+Nhân viên → chọn 4.1. NhanVien làm bảng chính. Lớp 2.9 và 3.1 trở thành bảng phụ, chỉ giữ khóa MaNV liên kết. Riêng 3.2. TaiXe không bị loại vì có thuộc tính riêng (BangLai, ChungChi, NgayHetHan) không có ở bảng chính → giữ lại làm bảng phụ mở rộng, liên kết qua MaNV.
+Hàng hóa → chọn 1.4. HangHoa làm bảng chính. Lớp 2.8 trở thành bảng phụ mở rộng, chỉ giữ MaHang (khóa liên kết) + thuộc tính riêng DieuKienBaoQuan.
+
+Các bảng không trùng đối tượng, giữ nguyên: DichVu, PHIEU_NHAP, CHI_TIET_PHIEU_NHAP, PHIEU_XUAT, CHI_TIET_PHIEU_XUAT, PHIEU_KIEM_KE, CHI_TIET_KIEM_KE, TON_KHO, SanPham, PhuongTien, ChuyenVan, LoTrinh, SuCoVanTai, PhongBan, ChucVu, TrangThaiNhanVien, CongNo, GiaoDichCOD, PhieuThuChi, SoQuy, DoiSoatCOD.
+4.2. Xây dựng cấu trúc bảng chung
+Bảng dùng chung: DonHang
+Thuộc tính
+Kiểu dữ liệu
+Kích thước
+Khóa
+maDonHang
+VARCHAR
+10
+PK
+maKhachHang
+VARCHAR
+20
+FK → KhachHang
+maDichVu
+VARCHAR
+20
+FK → DichVu
+nguoiGui, nguoiNhan
+VARCHAR
+100
+
+sdtNguoiGui, sdtNguoiNhan
+VARCHAR
+15
+
+diachiLayHang, diachiGiaoHang
+VARCHAR
+255
+
+khoiLuong
+DECIMAL
+10,2
+
+tienCOD
+DECIMAL
+15,2
+
+phiVanChuyen
+DECIMAL
+15,2
+
+trangThai
+VARCHAR
+50
+ENUM: Đã tạo/Đã nhập kho/Đang giao/Đã giao/Đã đối soát/Đã hủy
+lyDoHuy
+VARCHAR
+300
+
+ngayTao
+DATETIME
+-
+
+
+Bảng dùng chung: NhanVien
+Thuộc tính
+Kiểu dữ liệu
+Kích thước
+Khóa
+maNV
+VARCHAR
+20
+PK
+hoTen
+VARCHAR
+100
+
+ngaySinh
+DATE
+-
+
+gioiTinh
+VARCHAR
+10
+
+soDienThoai
+VARCHAR
+15
+
+diaChi
+VARCHAR
+255
+
+email
+VARCHAR
+100
+
+maPhongBan
+VARCHAR
+20
+FK → PhongBan
+maChucVu
+VARCHAR
+20
+FK → ChucVu
+maTrangThai
+VARCHAR
+20
+FK → TrangThaiNhanVien
+
+Bảng dùng chung: TaiXe
+Thuộc tính
+Kiểu dữ liệu
+Kích thước
+Khóa
+maTaiXe
+VARCHAR
+20
+PK
+maNV
+VARCHAR
+20
+FK → NhanVien
+soGPLX
+VARCHAR
+30
+
+loaiGPLX
+VARCHAR
+20
+
+trangThai
+VARCHAR
+30
+
+
+Bảng dùng chung: HangHoa
+Thuộc tính
+Kiểu dữ liệu
+Kích thước
+Khóa
+maHangHoa
+VARCHAR
+10
+PK
+maDonHang
+VARCHAR
+10
+FK → DonHang
+maSP
+VARCHAR
+20
+FK → SanPham (NULL nếu chưa ánh xạ)
+loaiHangHoa
+VARCHAR
+50
+
+soLuong
+INT
+10
+
+trongLuong
+DOUBLE
+-
+
+
+Bảng dùng chung: TaiKhoan
+Thuộc tính
+Kiểu dữ liệu
+Kích thước
+Khóa
+maTaiKhoan
+VARCHAR
+10
+PK
+maNV
+VARCHAR
+20
+FK → NhanVien
+tenDangNhap
+VARCHAR
+50
+
+matKhau
+VARCHAR
+255
+
+vaiTro
+VARCHAR
+30
+
+trangThai
+VARCHAR
+20
+
+
+4.3. Thiết kế cơ sở dữ liệu chung
+Từ kết quả mục 3.1 và 3.2, cơ sở dữ liệu chung của hệ thống ERP Hoàng Minh được xây dựng gồm 2 nhóm bảng:
+Nhóm bảng dùng chung (liên kết nhiều hệ thống): DonHang, HangHoa, NhanVien, TaiXe, TaiKhoan - được chuẩn hóa, chỉ lưu một bản duy nhất, các hệ thống khác truy xuất qua khóa ngoại thay vì sao chép dữ liệu.
+Nhóm bảng riêng của từng hệ thống (không trùng đối tượng):
+HT1: DichVu
+HT2: PHIEU_NHAP, CHI_TIET_PHIEU_NHAP, PHIEU_XUAT, CHI_TIET_PHIEU_XUAT, PHIEU_KIEM_KE, CHI_TIET_KIEM_KE, TON_KHO
+HT3: PhuongTien, ChuyenVan, LoTrinh, SuCoVanTai, TaiXe (bảng phụ)
+HT4: PhongBan, ChucVu, TrangThaiNhanVien
+HT5: CongNo, GiaoDichCOD, PhieuThuChi, TaiKhoan, SoQuy, DoiSoatCOD
+Quan hệ giữa các bảng được xác định bằng khóa chính (PK) và khóa ngoại (FK); toàn bộ FK trỏ về 4 bảng dùng chung ở trên, tạo thành một lược đồ CSDL thống nhất duy nhất, dùng làm cơ sở thực tế để viết code ở Chương 4.
+Phân quyền cho từng hệ thống:
+Bảng
+HT1
+HT2
+HT3
+HT4
+HT5
+KhachHang, DichVu
+Đ/T/S, hủy mềm
+Đọc
+–
+–
+Đọc
+DonHang, HangHoa
+Đ/T/S, hủy mềm
+Đọc/Sửa (trangThai)
+Đọc/Sửa (trangThai)
+–
+Đọc/Sửa (trangThai, tienCOD)
+PHIEU_NHAP...TON_KHO, SanPham
+Đọc
+Đ/T/S/X
+Đọc
+–
+Đọc + Ghi ChiPhiLuuKho
+PhuongTien, ChuyenVan, LoTrinh, SuCoVanTai, ChiTietChuyenHang
+–
+Đọc
+Đ/T/S/X
+–
+Đọc
+NhanVien, PhongBan, ChucVu, TrangThaiNhanVien
+Đọc
+Đọc
+Đọc
+Đ/T/S/X
+Đọc
+TaiXe
+Đọc
+–
+Sửa (trangThai)
+Đ/T/S/X (soGPLX, loaiGPLX)
+Đọc

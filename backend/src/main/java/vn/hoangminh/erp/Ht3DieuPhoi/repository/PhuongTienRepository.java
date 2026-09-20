@@ -1,0 +1,1 @@
+package vn.hoangminh.erp.Ht3DieuPhoi.repository; import org.springframework.data.jpa.repository.JpaRepository; import vn.hoangminh.erp.Ht3DieuPhoi.domain.PhuongTien; public interface PhuongTienRepository extends JpaRepository<PhuongTien,Integer> {}

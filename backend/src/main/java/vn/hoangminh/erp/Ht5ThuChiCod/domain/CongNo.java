@@ -1,0 +1,2 @@
+package vn.hoangminh.erp.Ht5ThuChiCod.domain; import jakarta.persistence.*; import java.math.BigDecimal; import java.time.*; import lombok.*;
+@Entity @Table(name="CongNo") @Getter @Setter @NoArgsConstructor public class CongNo { @Id @Column(length=10) String maCongNo; String maKhachHang; BigDecimal soTienPhaiTra; BigDecimal soTienDaTra; @Column(insertable=false,updatable=false) BigDecimal soDuNo; String trangThai; LocalDateTime ngayCapNhat; }

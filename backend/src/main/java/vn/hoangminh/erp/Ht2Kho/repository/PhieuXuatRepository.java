@@ -1,0 +1,1 @@
+package vn.hoangminh.erp.Ht2Kho.repository; import org.springframework.data.jpa.repository.JpaRepository; import vn.hoangminh.erp.Ht2Kho.domain.PhieuXuat; import java.time.LocalDate; import java.util.*; public interface PhieuXuatRepository extends JpaRepository<PhieuXuat,String> { List<PhieuXuat> findByNgayXuatBetween(LocalDate a,LocalDate b); }

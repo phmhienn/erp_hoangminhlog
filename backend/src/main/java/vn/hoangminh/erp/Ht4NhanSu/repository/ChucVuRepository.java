@@ -1,0 +1,1 @@
+package vn.hoangminh.erp.Ht4NhanSu.repository; import org.springframework.data.jpa.repository.JpaRepository; import vn.hoangminh.erp.Ht4NhanSu.domain.ChucVu; public interface ChucVuRepository extends JpaRepository<ChucVu,String>{}

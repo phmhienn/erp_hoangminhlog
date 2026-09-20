@@ -1,0 +1,2 @@
+package vn.hoangminh.erp.Ht5ThuChiCod.domain; import jakarta.persistence.*; import java.math.BigDecimal; import java.time.*; import lombok.*;
+@Entity @Table(name="DoiSoatCOD") @Getter @Setter @NoArgsConstructor public class DoiSoatCOD { @Id @Column(length=10) String maDoiSoat; LocalDate ngayDoiSoat; BigDecimal tongTien; BigDecimal chenhLech; String trangThai; String nguoiDoiSoat; LocalDateTime thoiGian; }

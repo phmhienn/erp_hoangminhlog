@@ -1,0 +1,1 @@
+package vn.hoangminh.erp.Ht2Kho.repository; import org.springframework.data.jpa.repository.JpaRepository; import vn.hoangminh.erp.Ht2Kho.domain.BienBanSuCo; public interface BienBanSuCoRepository extends JpaRepository<BienBanSuCo,String>{java.util.List<BienBanSuCo> findByOrderByNgayLapDesc();}

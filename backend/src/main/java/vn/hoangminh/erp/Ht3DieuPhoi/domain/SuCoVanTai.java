@@ -1,0 +1,5 @@
+package vn.hoangminh.erp.Ht3DieuPhoi.domain;
+import jakarta.persistence.*; import lombok.Getter; import lombok.Setter; import java.time.LocalDateTime;
+@Entity @Table(name="SuCoVanTai") @Getter @Setter public class SuCoVanTai { @Id @GeneratedValue(strategy=GenerationType.IDENTITY) @Column(name="MaSuCo") private Integer maSuCo; @Column(name="MaChuyen") private Integer maChuyen; @Column(name="MaDonHang",length=10) private String maDonHang; @Column(name="MaTaiXe",length=20) private String maTaiXe; @Column(name="LoaiSuCo",length=50) private String loaiSuCo; @Column(name="MoTa") private String moTa; @Column(name="ThoiGian") private LocalDateTime thoiGian; @Column(name="TrangThai",length=30) private String trangThai; @Column(name="HinhAnh",length=255) private String hinhAnh;
+ /** [G22] Phương án xử lý do điều phối cập nhật để tài xế đọc lại. */
+ @Column(name="HuongXuLy",length=500) private String huongXuLy; @Column(name="NguoiXuLy",length=20) private String nguoiXuLy; @Column(name="ThoiGianXuLy") private LocalDateTime thoiGianXuLy; }

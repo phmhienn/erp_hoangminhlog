@@ -1,0 +1,1 @@
+package vn.hoangminh.erp.Ht3DieuPhoi.repository; import org.springframework.data.jpa.repository.JpaRepository; import vn.hoangminh.erp.Ht3DieuPhoi.domain.SuCoVanTai; import java.util.*; public interface SuCoVanTaiRepository extends JpaRepository<SuCoVanTai,Integer> { List<SuCoVanTai> findByMaChuyen(Integer id); }

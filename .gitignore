@@ -1,0 +1,17 @@
+# Build
+backend/target/
+frontend/dist/
+frontend/node_modules/
+uploads/
+
+# IDE / OS
+.idea/
+*.iml
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Env & secrets
+.env
+.env.local
+*.local

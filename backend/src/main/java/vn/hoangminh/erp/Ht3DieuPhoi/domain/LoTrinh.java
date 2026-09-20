@@ -1,0 +1,3 @@
+package vn.hoangminh.erp.Ht3DieuPhoi.domain;
+import jakarta.persistence.*; import lombok.Getter; import lombok.Setter; import java.math.BigDecimal;
+@Entity @Table(name="LoTrinh") @Getter @Setter public class LoTrinh { @Id @GeneratedValue(strategy=GenerationType.IDENTITY) @Column(name="MaLoTrinh") private Integer maLoTrinh; @Column(name="MaChuyen") private Integer maChuyen; @Column(name="DiemXuatPhat",length=255) private String diemXuatPhat; @Column(name="DiemKetThuc",length=255) private String diemKetThuc; @Column(name="KhoangCach",precision=10,scale=2) private BigDecimal khoangCach; @Column(name="ThoiGianDuKien") private Integer thoiGianDuKien; @Column(name="MoTa") private String moTa; }

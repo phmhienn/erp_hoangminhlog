@@ -1,0 +1,1 @@
+package vn.hoangminh.erp.Ht5ThuChiCod.repository; import org.springframework.data.jpa.repository.JpaRepository; import vn.hoangminh.erp.Ht5ThuChiCod.domain.ChiTietDoiSoat; public interface ChiTietDoiSoatRepository extends JpaRepository<ChiTietDoiSoat,ChiTietDoiSoat.Id>{java.util.List<ChiTietDoiSoat> findByIdMaDoiSoat(String maDoiSoat);}

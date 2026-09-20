@@ -1,0 +1,52 @@
+{
+  "auth.dangnhap.thanhcong": "Đăng nhập thành công",
+  "auth.dangnhap.sai": "Tên đăng nhập hoặc mật khẩu không đúng",
+  "auth.dangnhap.taikhoan.khonghoatdong": "Tài khoản không ở trạng thái hoạt động nên không thể đăng nhập",
+  "auth.dangnhap.thieuthongtin": "Vui lòng nhập đủ tên đăng nhập và mật khẩu",
+  "auth.dangxuat.thanhcong": "Đăng xuất thành công",
+  "auth.phien.hethang": "Phiên làm việc đã hết hạn, vui lòng đăng nhập lại",
+  "auth.token.khonghople": "Token không hợp lệ",
+
+  "quyen.tuchoi": "Bạn không có quyền thực hiện thao tác này",
+  "quyen.tuchoi.bang": "Bạn không có quyền thao tác trên dữ liệu này",
+  "quyen.tuchoi.hoso": "Bạn chỉ được xem hồ sơ của chính mình",
+
+  "loi.dulieu.khonghople": "Dữ liệu không hợp lệ, vui lòng kiểm tra lại",
+  "loi.tontai": "Dữ liệu đã tồn tại trong hệ thống",
+  "loi.khongtimthay": "Không tìm thấy dữ liệu",
+  "loi.trangthai.xungdot": "Thao tác không thực hiện được do trạng thái hiện tại của chứng từ",
+  "loi.hethong": "Hệ thống đang xử lý lỗi, vui lòng thử lại",
+
+  "vaitro.NV_KINH_DOANH": "Nhân viên kinh doanh",
+  "vaitro.QL_KINH_DOANH": "Quản lý kinh doanh",
+  "vaitro.NV_KHO": "Nhân viên kho",
+  "vaitro.QL_KHO": "Quản lý kho",
+  "vaitro.NV_DIEU_PHOI": "Nhân viên điều phối",
+  "vaitro.QL_DIEU_PHOI": "Quản lý điều phối",
+  "vaitro.NV_GIAO_HANG": "Nhân viên giao hàng",
+  "vaitro.NV_NHAN_SU": "Nhân viên nhân sự",
+  "vaitro.QL_NHAN_SU": "Quản lý nhân sự",
+  "vaitro.KE_TOAN_VIEN": "Kế toán viên",
+  "vaitro.THU_QUY": "Thủ quỹ",
+  "vaitro.KE_TOAN_TRUONG": "Kế toán trưởng",
+  "vaitro.NHAN_VIEN": "Nhân viên thường",
+
+  "hethong.HT1": "Quản lý đơn hàng/dịch vụ",
+  "hethong.HT2": "Quản lý nhập – xuất kho",
+  "hethong.HT3": "Quản lý điều phối & giao hàng",
+  "hethong.HT4": "Quản lý hồ sơ nhân viên",
+  "hethong.HT5": "Quản lý thu chi & COD",
+
+  "phanhe.HT1": "Kinh doanh",
+  "phanhe.HT2": "Kho vận",
+  "phanhe.HT3": "Vận tải – Giao nhận",
+  "phanhe.HT4": "Nhân sự",
+  "phanhe.HT5": "Tài chính – Kế toán",
+
+  "trangthai.donhang.DaTao": "Đã tạo",
+  "trangthai.donhang.DaNhapKho": "Đã nhập kho",
+  "trangthai.donhang.DangGiao": "Đang giao",
+  "trangthai.donhang.DaGiao": "Đã giao",
+  "trangthai.donhang.DaDoiSoat": "Đã đối soát",
+  "trangthai.donhang.DaHuy": "Đã hủy"
+}

@@ -1,0 +1,1 @@
+package vn.hoangminh.erp.Ht3DieuPhoi.repository; import org.springframework.data.jpa.repository.JpaRepository; import vn.hoangminh.erp.Ht3DieuPhoi.domain.MinhChungGiaoHang; import java.util.*; public interface MinhChungGiaoHangRepository extends JpaRepository<MinhChungGiaoHang,String> { List<MinhChungGiaoHang> findByMaDonHang(String id); }

@@ -1,0 +1,4 @@
+package vn.hoangminh.erp.Ht4NhanSu.domain;
+import jakarta.persistence.*; import java.time.LocalDateTime; import lombok.Getter; import lombok.Setter;
+/** [G21] Yêu cầu cập nhật hồ sơ do nhân viên gửi — đặc tả 3.4.2 vai trò 3. */
+@Entity @Table(name="YeuCauCapNhatHoSo") @Getter @Setter public class YeuCauCapNhatHoSo { @Id @GeneratedValue(strategy=GenerationType.IDENTITY) @Column(name="maYeuCau") private Integer maYeuCau; @Column(name="maNV",length=20) private String maNV; @Column(name="noiDung",length=500) private String noiDung; @Column(name="trangThai",length=20) private String trangThai; @Column(name="thoiGianGui") private LocalDateTime thoiGianGui; @Column(name="nguoiXuLy",length=20) private String nguoiXuLy; @Column(name="thoiGianXuLy") private LocalDateTime thoiGianXuLy; @Column(name="phanHoi",length=300) private String phanHoi; }

@@ -1,0 +1,1 @@
+package vn.hoangminh.erp.Ht5ThuChiCod.repository; import org.springframework.data.jpa.repository.JpaRepository; import vn.hoangminh.erp.Ht5ThuChiCod.domain.PhieuThuChi; public interface PhieuThuChiRepository extends JpaRepository<PhieuThuChi,String>{}

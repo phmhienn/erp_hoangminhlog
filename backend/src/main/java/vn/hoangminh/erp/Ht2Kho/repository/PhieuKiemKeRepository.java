@@ -1,0 +1,1 @@
+package vn.hoangminh.erp.Ht2Kho.repository; import org.springframework.data.jpa.repository.JpaRepository; import vn.hoangminh.erp.Ht2Kho.domain.PhieuKiemKe; public interface PhieuKiemKeRepository extends JpaRepository<PhieuKiemKe,String> {}

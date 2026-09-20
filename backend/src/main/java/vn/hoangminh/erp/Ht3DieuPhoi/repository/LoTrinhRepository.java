@@ -1,0 +1,1 @@
+package vn.hoangminh.erp.Ht3DieuPhoi.repository; import org.springframework.data.jpa.repository.JpaRepository; import vn.hoangminh.erp.Ht3DieuPhoi.domain.LoTrinh; import java.util.*; public interface LoTrinhRepository extends JpaRepository<LoTrinh,Integer> { List<LoTrinh> findByMaChuyen(Integer id); }

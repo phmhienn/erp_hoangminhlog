@@ -1,0 +1,76 @@
+server:
+  port: 8080
+  servlet:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+
+spring:
+  application:
+    name: erp-hoangminh
+
+  # Tự đọc file .env khi chạy local. Biến môi trường của hệ điều hành vẫn được ưu tiên hơn.
+  config:
+    import: optional:file:.env[.properties],optional:file:./backend/.env[.properties]
+
+  # Một CSDL dùng chung duy nhất (mục 2.6) — MySQL erp_hoangminh
+  datasource:
+    url: jdbc:mysql://${DB_HOST:localhost}:${DB_PORT:3306}/erp_hoangminh?createDatabaseIfNotExist=true&useUnicode=true&characterEncoding=UTF-8&connectionCollation=utf8mb4_unicode_ci&serverTimezone=Asia/Ho_Chi_Minh&useSSL=false&allowPublicKeyRetrieval=true
+    username: ${DB_USER:root}
+    password: ${DB_PASSWORD:}
+    hikari:
+      maximum-pool-size: 10
+      pool-name: erp-hikari
+
+  jpa:
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      # Lược đồ do Flyway quản lý từ ERP_database.sql; JPA chỉ kiểm tra khớp ánh xạ
+      ddl-auto: validate
+    open-in-view: false
+    properties:
+      hibernate:
+        jdbc:
+          time_zone: Asia/Ho_Chi_Minh
+
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+    baseline-on-migrate: true
+    encoding: UTF-8
+    validate-on-migrate: true
+
+  # Thông báo nguyên văn đặt tập trung (mục 4 — Backend, huong_di_lap_trinh)
+  messages:
+    basename: messages_vi
+    encoding: UTF-8
+    fallback-to-system-locale: false
+
+  web:
+    locale: vi_VN
+    locale-resolver: fixed
+
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 20MB
+
+erp:
+  jwt:
+    # Chỉ dùng cho demo nội bộ; production phải cấp qua biến môi trường
+    secret: ${ERP_JWT_SECRET:erp-hoangminh-demo-secret-key-change-me-0123456789abcdef}
+    expiration-minutes: 480
+    issuer: erp-hoangminh
+  upload:
+    # File ảnh (minh chứng, sự cố) lưu ngoài CSDL; DB chỉ lưu đường dẫn (mục 2 huong_di_lap_trinh)
+    dir: ${ERP_UPLOAD_DIR:./uploads}
+  cors:
+    allowed-origins: http://localhost:5173,http://127.0.0.1:5173
+
+logging:
+  level:
+    root: INFO
+    vn.hoangminh.erp: DEBUG
+    org.flywaydb: INFO

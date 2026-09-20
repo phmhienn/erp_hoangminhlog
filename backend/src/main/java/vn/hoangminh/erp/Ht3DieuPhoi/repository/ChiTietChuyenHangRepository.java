@@ -1,0 +1,1 @@
+package vn.hoangminh.erp.Ht3DieuPhoi.repository; import org.springframework.data.jpa.repository.JpaRepository; import vn.hoangminh.erp.Ht3DieuPhoi.domain.ChiTietChuyenHang; import java.util.*; public interface ChiTietChuyenHangRepository extends JpaRepository<ChiTietChuyenHang,ChiTietChuyenHang.Id> { List<ChiTietChuyenHang> findByIdMaChuyen(Integer id); }

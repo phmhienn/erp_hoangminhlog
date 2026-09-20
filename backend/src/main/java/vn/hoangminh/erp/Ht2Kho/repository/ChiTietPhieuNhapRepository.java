@@ -1,0 +1,1 @@
+package vn.hoangminh.erp.Ht2Kho.repository; import org.springframework.data.jpa.repository.JpaRepository; import vn.hoangminh.erp.Ht2Kho.domain.ChiTietPhieuNhap; import java.util.*; public interface ChiTietPhieuNhapRepository extends JpaRepository<ChiTietPhieuNhap,ChiTietPhieuNhap.Id> { List<ChiTietPhieuNhap> findByIdMaPhieuNhap(String ma); }

@@ -1,0 +1,3 @@
+package vn.hoangminh.erp.Ht2Kho.domain;
+import jakarta.persistence.*; import lombok.Getter; import lombok.Setter;
+@Entity @Table(name="CHI_TIET_KIEM_KE") @Getter @Setter public class ChiTietKiemKe { @EmbeddedId private Id id; @Column(name="soLuongHeThong") private Integer soLuongHeThong; @Column(name="soLuongThucTe") private Integer soLuongThucTe; @Column(name="chenhLech") private Integer chenhLech; @Column(name="ghiChu",length=255) private String ghiChu; @Embeddable @Getter @Setter public static class Id implements java.io.Serializable { @Column(name="maPhieuKiemKe",length=20) private String maPhieuKiemKe; @Column(name="maSP",length=20) private String maSP; public Id(){} public Id(String p,String s){maPhieuKiemKe=p;maSP=s;} } }

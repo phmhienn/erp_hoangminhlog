@@ -1,0 +1,12 @@
+package vn.hoangminh.erp.Ht5ThuChiCod.dto; import jakarta.validation.constraints.*; import java.math.*; import java.time.*; import java.util.*;
+public final class Ht5Dto {private Ht5Dto(){}
+ /** Giao dịch COD kèm bối cảnh đơn hàng — đặc tả 3.5.2: tra cứu được cả trạng thái giao hàng và khách hàng. */
+ public record GiaoDichView(String maGiaoDich,String maDonHang,String tenKhachHang,String trangThaiDonHang,BigDecimal phaiThu,BigDecimal thucThu,BigDecimal chenhLech,String trangThai,LocalDate ngayTao,String nguoiCapNhat,String lyDoSaiLech,String nguoiXuLySaiLech,LocalDateTime thoiGianXuLySaiLech){}
+ /** Kế toán viên ghi nhận nguyên nhân và hướng xử lý một giao dịch lệch tiền (3.5.1 bước 2). */
+ public record SaiLechInput(@NotBlank @Size(max=255) String lyDoSaiLech,@Size(max=20) String trangThai){}
+ /** Một dòng nhật ký thao tác trên COD — usecase "Tra cứu lịch sử giao dịch" của 3.5.3. */
+ public record LichSuView(LocalDateTime thoiGian,String loai,String ma,String maDonHang,BigDecimal soTien,String trangThai,String nguoiThucHien,String moTa){} public record PhieuView(String maPhieu,String loaiPhieu,String maGiaoDich,String maDonHang,BigDecimal soTien,LocalDate ngayLap,String noiDung,String trangThai,String nguoiLap,String nguoiDuyet,String nguoiXacNhan,LocalDateTime thoiGianXacNhan){} public record PhieuInput(@NotBlank String loaiPhieu,String maGiaoDich,@NotNull @DecimalMin("0") BigDecimal soTien,@NotNull LocalDate ngayLap,@Size(max=100) String noiDung){} public record TrangThaiInput(@NotBlank String trangThai,@DecimalMin("0") BigDecimal soTienThucThu){} public record DoiSoatInput(@NotNull LocalDate ngayDoiSoat,@NotEmpty List<String> maGiaoDich){} public record DoiSoatView(String maDoiSoat,LocalDate ngayDoiSoat,BigDecimal tongTien,BigDecimal chenhLech,String trangThai,String nguoiDoiSoat,LocalDateTime thoiGian,List<String> maGiaoDich){} public record SoQuyView(String maSoQuy,String maPhieu,BigDecimal thu,BigDecimal chi,LocalDate ngayGhiSo){}
+ public record CongNoView(String maCongNo,String maKhachHang,String tenKhachHang,BigDecimal phaiTra,BigDecimal daTra,BigDecimal conLai,String trangThai,LocalDateTime ngayCapNhat){}
+ /** Báo cáo thu – chi COD của đặc tả 3.5.1 bước 6 (đã thu / đã chi trả / còn phải trả / sai lệch). */
+ public record BaoCaoView(LocalDate tuNgay,LocalDate denNgay,long soGiaoDich,BigDecimal tongPhaiThu,BigDecimal tongThucThu,BigDecimal tongDaChiTra,BigDecimal conPhaiTra,long soGiaoDichSaiLech,List<GiaoDichView> saiLech,BigDecimal soDuQuy,Map<String,Long> theoTrangThai,String thongBao){}
+}

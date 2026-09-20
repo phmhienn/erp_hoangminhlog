@@ -1,0 +1,3 @@
+package vn.hoangminh.erp.Ht3DieuPhoi.domain;
+import jakarta.persistence.*; import lombok.Getter; import lombok.Setter; import java.time.LocalDateTime;
+@Entity @Table(name="MinhChungGiaoHang") @Getter @Setter public class MinhChungGiaoHang { @Id @Column(name="maMinhChung",length=20) private String maMinhChung; @Column(name="maDonHang",length=10) private String maDonHang; @Enumerated(EnumType.STRING) @Column(name="loaiMinhChung") private Loai loaiMinhChung; @Column(name="duongDan",length=255) private String duongDan; @Column(name="maNVTai",length=20) private String maNVTai; @Column(name="thoiGianTai") private LocalDateTime thoiGianTai; public enum Loai { Anh, ChuKy } }
