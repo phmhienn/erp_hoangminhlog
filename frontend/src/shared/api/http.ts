@@ -1,6 +1,8 @@
 import axios, { type AxiosError } from 'axios'
 import type { ApiErrorBody } from './types'
 
+console.log("BACKEND URL =", import.meta.env.VITE_BACKEND_URL);
+
 /** Khoá lưu token của phiên làm việc trong localStorage. */
 export const TOKEN_KEY = 'erp.accessToken'
 
