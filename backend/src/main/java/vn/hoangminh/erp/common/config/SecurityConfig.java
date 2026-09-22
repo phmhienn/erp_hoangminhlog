@@ -42,7 +42,7 @@ public class SecurityConfig {
    * Các endpoint không yêu cầu đăng nhập. Ảnh minh chứng nằm ở {@code /uploads/**} vì thẻ
    * {@code <img>} của trình duyệt không gửi được header Authorization.
    */
-  private static final String[] PUBLIC_ENDPOINTS = {"/api/auth/dang-nhap", "/uploads/**"};
+  private static final String[] PUBLIC_ENDPOINTS = {"/api/auth/dang-nhap", "/api/ping/db", "/uploads/**"};
 
   @Bean
   public PasswordEncoder passwordEncoder() {
