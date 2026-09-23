@@ -12,6 +12,35 @@ interface Incident { maBienBan: string; maDonHang: string; maPhieuNhap: string |
 interface History { loai: string; ma: string; maDonHang: string; tenKhachHang: string | null; ngay: string; trangThai: string; maNV: string | null; matHang: string | null }
 interface Report { soPhieuNhap: number; donDaNhap: number; soPhieuXuat: number; donDaXuat: number; theoTrangThaiNhap: Record<string, number>; theoNgayNhap: Record<string, number>; theoTrangThaiXuat: Record<string, number>; theoNgayXuat: Record<string, number> }
 const today = () => { const d = new Date(); return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}` }
+const monthNameToNumber: Record<string, string> = {
+  jan: '01', january: '01',
+  feb: '02', february: '02',
+  mar: '03', march: '03',
+  apr: '04', april: '04',
+  may: '05',
+  jun: '06', june: '06',
+  jul: '07', july: '07',
+  aug: '08', august: '08',
+  sep: '09', sept: '09', september: '09',
+  oct: '10', october: '10',
+  nov: '11', november: '11',
+  dec: '12', december: '12',
+}
+const chuanHoaNgay = (value: string) => {
+  const raw = value.trim()
+  if (/^\d{4}-\d{2}-\d{2}$/.test(raw)) return raw
+
+  const named = raw.match(/^(\d{1,2})[-/\s]([A-Za-z]{3,9})[-/\s](\d{4})$/)
+  if (named) {
+    const month = monthNameToNumber[named[2].toLowerCase()]
+    if (month) return `${named[3]}-${month}-${named[1].padStart(2, '0')}`
+  }
+
+  const numbered = raw.match(/^(\d{1,2})[-/\s](\d{1,2})[-/\s](\d{4})$/)
+  if (numbered) return `${numbered[3]}-${numbered[2].padStart(2, '0')}-${numbered[1].padStart(2, '0')}`
+
+  return raw
+}
 const titles: Record<string, string> = { 'phieu-nhap': 'Tiếp nhận đơn hàng vào kho', 'phieu-xuat': 'Bàn giao đơn hàng vận chuyển', 'phe-duyet': 'Duyệt tiếp nhận – bàn giao', 'kiem-ke': 'Kiểm kê đơn hàng trong kho', dashboard: 'Theo dõi kho', 'bao-cao': 'Báo cáo nhập – xuất đơn hàng', 'bao-cao-phieu': 'Lịch sử đơn hàng qua kho' }
 
 function Card({ title, children }: { title: string; children: ReactNode }) {
@@ -110,7 +139,7 @@ export function Ht2Page({ mode }: { mode: string }) {
     {['phieu-nhap', 'phieu-xuat'].includes(mode) && <>
       {!edit && <Card title={isReceipt ? 'Đơn đã duyệt chờ tiếp nhận' : 'Đơn đang lưu kho'}><Orders rows={displayedOrders} selected={form.maDonHang} choose={o => setForm({ ...form, maDonHang: o.maDonHang })} /></Card>}
       <Card title={edit ? `Cập nhật ${edit}` : isReceipt ? 'Lập phiếu tiếp nhận' : 'Lập phiếu bàn giao'}>
-        <form onSubmit={e => { e.preventDefault(); const endpoint = `/ht2/${mode}`; const body = { maDonHang: form.maDonHang, ghiChu: form.ghiChu || null, ...(isReceipt ? { ngayNhap: form.ngay } : { ngayXuat: form.ngay, lyDoXuat: form.lyDoXuat }) }; void act(async () => { if (edit) await http.put(`${endpoint}/${edit}`, body); else await http.post(endpoint, body); reset() }, 'Đã lưu phiếu. Gửi duyệt để hoàn tất.') }}>
+        <form onSubmit={e => { e.preventDefault(); const endpoint = `/ht2/${mode}`; const ngay = chuanHoaNgay(form.ngay); const body = { maDonHang: form.maDonHang, ghiChu: form.ghiChu || null, ...(isReceipt ? { ngayNhap: ngay } : { ngayXuat: ngay, lyDoXuat: form.lyDoXuat }) }; void act(async () => { if (edit) await http.put(`${endpoint}/${edit}`, body); else await http.post(endpoint, body); reset() }, 'Đã lưu phiếu. Gửi duyệt để hoàn tất.') }}>
           <div className="form-grid">
             <label>Đơn hàng *<input className="input" required readOnly value={form.maDonHang} placeholder="Chọn đơn ở danh sách phía trên" /></label>
             <label>{isReceipt ? 'Ngày tiếp nhận' : 'Ngày bàn giao'} *<input className="input" type="date" required value={form.ngay} onChange={e => setForm({ ...form, ngay: e.target.value })} /></label>
@@ -128,7 +157,7 @@ export function Ht2Page({ mode }: { mode: string }) {
     </>}
     {mode === 'kiem-ke' && <>
       <Card title="Đối chiếu đơn trong kho"><Orders rows={displayedOrders} selected={count.maDonHang} choose={o => setCount({ ...count, maDonHang: o.maDonHang })} /></Card>
-      <Card title="Ghi nhận kiểm kê đơn hàng"><form onSubmit={e => { e.preventDefault(); void act(() => http.post('/ht2/phieu-kiem-ke', { ngayKiemKe: count.ngayKiemKe, khuVucKiemKe: count.khuVucKiemKe || null, ghiChu: count.ghiChu || null, chiTiet: [{ maDonHang: count.maDonHang, soLuongThucTe: count.soLuongThucTe, ghiChu: count.ghiChu || null }] }), 'Đã lưu kết quả kiểm kê') }}>
+      <Card title="Ghi nhận kiểm kê đơn hàng"><form onSubmit={e => { e.preventDefault(); void act(() => http.post('/ht2/phieu-kiem-ke', { ngayKiemKe: chuanHoaNgay(count.ngayKiemKe), khuVucKiemKe: count.khuVucKiemKe || null, ghiChu: count.ghiChu || null, chiTiet: [{ maDonHang: count.maDonHang, soLuongThucTe: count.soLuongThucTe, ghiChu: count.ghiChu || null }] }), 'Đã lưu kết quả kiểm kê') }}>
         <div className="form-grid"><label>Đơn hàng *<input className="input" required maxLength={10} value={count.maDonHang} onChange={e => setCount({ ...count, maDonHang: e.target.value })} /></label>
           <label>Thực tế<select className="select" value={count.soLuongThucTe} onChange={e => setCount({ ...count, soLuongThucTe: Number(e.target.value) })}><option value={1}>Có đơn trong kho</option><option value={0}>Không tìm thấy đơn</option></select></label>
           <label>Ngày kiểm kê *<input className="input" type="date" required value={count.ngayKiemKe} onChange={e => setCount({ ...count, ngayKiemKe: e.target.value })} /></label>
