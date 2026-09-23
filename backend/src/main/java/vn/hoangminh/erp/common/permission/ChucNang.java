@@ -52,7 +52,7 @@ public enum ChucNang {
   HT2_LAP_PHIEU_XUAT("HT2", "Lập phiếu xuất kho", NV_KHO, QL_KHO),
   HT2_KIEM_KE("HT2", "Kiểm tra hàng nhập – xuất", NV_KHO, QL_KHO),
   // "Theo dõi kho" nối với Nhân viên kho trong biểu đồ; quản lý kho có nhờ kế thừa.
-  HT2_DASHBOARD_NHAP_XUAT("HT2", "Theo dõi nhập – xuất kho", NV_KHO, QL_KHO),
+  HT2_DASHBOARD_NHAP_XUAT("HT2", "Theo dõi kho", NV_KHO, QL_KHO),
   // Chỉ riêng Người quản lí kho
   HT2_PHE_DUYET_PHIEU_NHAP("HT2", "Quản lí phiếu nhập – xuất", QL_KHO),
   HT2_BAO_CAO_NHAP_KHO("HT2", "Báo cáo nhập – xuất kho", QL_KHO),

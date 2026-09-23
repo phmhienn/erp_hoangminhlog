@@ -12,7 +12,7 @@ interface Incident { maBienBan: string; maDonHang: string; maPhieuNhap: string |
 interface History { loai: string; ma: string; maDonHang: string; tenKhachHang: string | null; ngay: string; trangThai: string; maNV: string | null; matHang: string | null }
 interface Report { soPhieuNhap: number; donDaNhap: number; soPhieuXuat: number; donDaXuat: number; theoTrangThaiNhap: Record<string, number>; theoNgayNhap: Record<string, number>; theoTrangThaiXuat: Record<string, number>; theoNgayXuat: Record<string, number> }
 const today = () => { const d = new Date(); return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}` }
-const titles: Record<string, string> = { 'phieu-nhap': 'Tiếp nhận đơn hàng vào kho', 'phieu-xuat': 'Bàn giao đơn hàng vận chuyển', 'phe-duyet': 'Duyệt tiếp nhận – bàn giao', 'kiem-ke': 'Kiểm kê đơn hàng trong kho', dashboard: 'Đơn hàng lưu kho', 'bao-cao': 'Báo cáo nhập – xuất đơn hàng', 'bao-cao-phieu': 'Lịch sử đơn hàng qua kho' }
+const titles: Record<string, string> = { 'phieu-nhap': 'Tiếp nhận đơn hàng vào kho', 'phieu-xuat': 'Bàn giao đơn hàng vận chuyển', 'phe-duyet': 'Duyệt tiếp nhận – bàn giao', 'kiem-ke': 'Kiểm kê đơn hàng trong kho', dashboard: 'Theo dõi kho', 'bao-cao': 'Báo cáo nhập – xuất đơn hàng', 'bao-cao-phieu': 'Lịch sử đơn hàng qua kho' }
 
 function Card({ title, children }: { title: string; children: ReactNode }) {
   return <div className="card"><div className="card-header"><h3>{title}</h3></div><div className="card-body">{children}</div></div>

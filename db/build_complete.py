@@ -18,6 +18,8 @@ header = '''-- ERP Hoàng Minh: cấu trúc và dữ liệu demo đầy đủ, M
 -- Tài khoản demo và mật khẩu giữ nguyên từ V2 (123456).
 -- Các đường dẫn ảnh demo là dữ liệu tham chiếu; SQL không chứa file ảnh.
 -- Không nhập file này lên database đã chạy migration.
+-- Phần cuối chuẩn hóa dữ liệu mẫu sang kho lưu đơn: không nhà cung cấp/giá nhập xuất.
+-- Các INSERT cũ được giữ nguyên nguồn; trạng thái cuối cùng theo phần chuẩn hóa.
 -- Nếu chạy backend trên database này: đặt SPRING_FLYWAY_BASELINE_VERSION=12
 -- và SPRING_FLYWAY_BASELINE_ON_MIGRATE=true khi chủ động bật Flyway.
 -- Cấu hình hiện tại tắt Flyway; không tự động thay đổi database đã nhập.
@@ -101,6 +103,7 @@ INSERT INTO PHIEU_KIEM_KE (maPhieuKiemKe,ngayKiemKe,khuVucKiemKe,maNV,trangThai,
 VALUES ('KK0000002','2026-09-18','Kho Hoàng Minh','NV0000003','Đã chốt','Kiểm tra đơn đã bàn giao');
 INSERT INTO KIEM_KE_DON_HANG VALUES ('KK0000002','DH0000004',0,0,0,'Đơn đã giao, không còn lưu kho');
 """
+extra += (root / 'db/demo_kho_don_hang.sql').read_text(encoding='utf-8')
 body = '\n'.join('-- ===== '+p.name+' =====\n'+p.read_text(encoding='utf-8-sig') for p in files)
 tables = re.findall(r'CREATE TABLE\s+(\w+)', body, re.I)
 inserts = set(t.lower() for t in re.findall(r'INSERT INTO\s+(\w+)', body+extra, re.I))
