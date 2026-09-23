@@ -12,15 +12,16 @@ base = re.sub(r'CREATE DATABASE.*?;', '', base, flags=re.S | re.I)
 base = re.sub(r'USE\s+\w+;', '', base, flags=re.I)
 assert statements(base) == statements(files[0].read_text(encoding='utf-8-sig')), 'Baseline differs from V1'
 header = '''-- ERP Hoàng Minh: cấu trúc và dữ liệu demo đầy đủ, MySQL 8.
--- Nguồn: ERP_database.sql đối chiếu V1; toàn bộ V1–V11 được giữ nguyên bên dưới.
+-- Nguồn: ERP_database.sql đối chiếu V1; toàn bộ V1–V12 được giữ nguyên bên dưới.
 -- Chạy MỘT LẦN trên database MỚI. Không có DROP DATABASE/TABLE, không tắt khóa ngoại.
 -- Database riêng để không ghi đè dữ liệu đang dùng. Có thể đổi tên tại hai dòng sau.
 -- Tài khoản demo và mật khẩu giữ nguyên từ V2 (123456).
 -- Các đường dẫn ảnh demo là dữ liệu tham chiếu; SQL không chứa file ảnh.
 -- Không nhập file này lên database đã chạy migration.
--- Nếu chạy backend trên database này: đặt SPRING_FLYWAY_BASELINE_VERSION=11
--- cho lần khởi động đầu (baseline-on-migrate=true đã có trong application.yml).
--- Flyway sẽ tạo lịch sử baseline 11; không chạy lại V1–V11 trên cấu trúc đã nhập.
+-- Nếu chạy backend trên database này: đặt SPRING_FLYWAY_BASELINE_VERSION=12
+-- và SPRING_FLYWAY_BASELINE_ON_MIGRATE=true khi chủ động bật Flyway.
+-- Cấu hình hiện tại tắt Flyway; không tự động thay đổi database đã nhập.
+-- Flyway sẽ tạo lịch sử baseline 12; không chạy lại V1–V12 trên cấu trúc đã nhập.
 SET NAMES utf8mb4;
 -- Workbench Safe Updates: chỉ thay đổi trong phiên import, không đổi cấu hình toàn server.
 SET @erp_previous_safe_updates = @@SESSION.SQL_SAFE_UPDATES;
@@ -94,13 +95,19 @@ INSERT INTO CongNo (maCongNo,maKhachHang,soTienPhaiTra,soTienDaTra,trangThai,nga
 VALUES ('CN0000001','KH0000003',100000,60000,'Còn nợ','2026-09-16 17:00:00');
 COMMIT;
 '''
+extra += """
+-- Kiểm kê nguyên đơn: đơn DH0000004 đã hoàn tất nên không còn nằm trong kho.
+INSERT INTO PHIEU_KIEM_KE (maPhieuKiemKe,ngayKiemKe,khuVucKiemKe,maNV,trangThai,ghiChu)
+VALUES ('KK0000002','2026-09-18','Kho Hoàng Minh','NV0000003','Đã chốt','Kiểm tra đơn đã bàn giao');
+INSERT INTO KIEM_KE_DON_HANG VALUES ('KK0000002','DH0000004',0,0,0,'Đơn đã giao, không còn lưu kho');
+"""
 body = '\n'.join('-- ===== '+p.name+' =====\n'+p.read_text(encoding='utf-8-sig') for p in files)
 tables = re.findall(r'CREATE TABLE\s+(\w+)', body, re.I)
 inserts = set(t.lower() for t in re.findall(r'INSERT INTO\s+(\w+)', body+extra, re.I))
-assert len(tables)==35 and all(t.lower() in inserts for t in tables)
+assert len(tables)==36 and all(t.lower() in inserts for t in tables)
 checks = '\n-- Kiểm đếm: mỗi bảng nghiệp vụ phải có ít nhất một bản ghi.\n'
 checks += '\nUNION ALL\n'.join(f"SELECT '{t}' AS tenBang, COUNT(*) AS soBanGhi FROM `{t}`" for t in tables)+';\n'
 checks += 'SELECT * FROM vw_SoDuQuy;\nSELECT * FROM vw_TonKhoChiTiet;\nSELECT * FROM vw_CongNoConLai;\n'
 checks += 'SET SESSION SQL_SAFE_UPDATES = @erp_previous_safe_updates;\n'
 (root/'db/ERP_hoangminh_hoan_chinh.sql').write_text(header+body+extra+checks,encoding='utf-8')
-print('Generated: 11 migrations, 35 tables, 3 views; all tables have demo INSERTs.')
+print(f'Generated: {len(files)} migrations, {len(tables)} tables; all tables have demo INSERTs.')

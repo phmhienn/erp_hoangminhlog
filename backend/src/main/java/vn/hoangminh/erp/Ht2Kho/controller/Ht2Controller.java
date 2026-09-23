@@ -2,7 +2,6 @@ package vn.hoangminh.erp.Ht2Kho.controller;
 import jakarta.validation.Valid; import lombok.RequiredArgsConstructor; import org.springframework.web.bind.annotation.*; import java.time.LocalDate; import java.util.*; import vn.hoangminh.erp.Ht1DonHang.domain.DonHang; import vn.hoangminh.erp.Ht2Kho.dto.Ht2Dto.*; import vn.hoangminh.erp.Ht2Kho.service.Ht2Service;
 @RestController @RequestMapping("/api/ht2") @RequiredArgsConstructor public class Ht2Controller {
  private final Ht2Service s;
- @GetMapping("/san-pham") public List<SanPhamView> sp(@RequestParam(required=false) String tuKhoa){return s.sanPham(tuKhoa);}
  @GetMapping("/don-cho-nhap") public List<DonKhoView> choNhap(@RequestParam(required=false) String tuKhoa){return s.donChoNhap(tuKhoa);}
  @GetMapping("/don-cho-xuat") public List<DonKhoView> choXuat(@RequestParam(required=false) String tuKhoa){return s.donChoXuat(tuKhoa);}
  @PostMapping("/phieu-nhap") public PhieuNhapView nhap(@Valid @RequestBody NhapInput i){return s.taoNhap(i);}
@@ -11,7 +10,7 @@ import jakarta.validation.Valid; import lombok.RequiredArgsConstructor; import o
  @PostMapping("/phieu-nhap/{ma}/gui-duyet") public PhieuNhapView gui(@PathVariable String ma){return s.guiDuyet(ma);}
  @PostMapping("/phieu-nhap/{ma}/duyet") public PhieuNhapView duyet(@PathVariable String ma){return s.duyet(ma);}
  @PostMapping("/phieu-nhap/{ma}/tu-choi") public PhieuNhapView tuChoi(@PathVariable String ma,@Valid @RequestBody vn.hoangminh.erp.Ht1DonHang.dto.Ht1Dto.LyDoInput i){return s.tuChoi(ma,i.lyDo());}
- @GetMapping("/ton-kho") public List<TonKhoView> ton(){return s.tonKho();}
+ @GetMapping("/ton-kho") public List<DonKhoView> ton(){return s.tonKho();}
  @PostMapping("/phieu-xuat") public PhieuXuatView xuat(@Valid @RequestBody XuatInput i){return s.taoXuat(i);}
  @PutMapping("/phieu-xuat/{ma}") public PhieuXuatView suaXuat(@PathVariable String ma,@Valid @RequestBody XuatInput i){return s.capNhatXuat(ma,i);}
  @PostMapping("/phieu-xuat/{ma}/gui-duyet") public PhieuXuatView guiDuyetXuat(@PathVariable String ma){return s.guiDuyetXuat(ma);}

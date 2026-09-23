@@ -1,13 +1,14 @@
 -- ERP Hoàng Minh: cấu trúc và dữ liệu demo đầy đủ, MySQL 8.
--- Nguồn: ERP_database.sql đối chiếu V1; toàn bộ V1–V11 được giữ nguyên bên dưới.
+-- Nguồn: ERP_database.sql đối chiếu V1; toàn bộ V1–V12 được giữ nguyên bên dưới.
 -- Chạy MỘT LẦN trên database MỚI. Không có DROP DATABASE/TABLE, không tắt khóa ngoại.
 -- Database riêng để không ghi đè dữ liệu đang dùng. Có thể đổi tên tại hai dòng sau.
 -- Tài khoản demo và mật khẩu giữ nguyên từ V2 (123456).
 -- Các đường dẫn ảnh demo là dữ liệu tham chiếu; SQL không chứa file ảnh.
 -- Không nhập file này lên database đã chạy migration.
--- Nếu chạy backend trên database này: đặt SPRING_FLYWAY_BASELINE_VERSION=11
--- cho lần khởi động đầu (baseline-on-migrate=true đã có trong application.yml).
--- Flyway sẽ tạo lịch sử baseline 11; không chạy lại V1–V11 trên cấu trúc đã nhập.
+-- Nếu chạy backend trên database này: đặt SPRING_FLYWAY_BASELINE_VERSION=12
+-- và SPRING_FLYWAY_BASELINE_ON_MIGRATE=true khi chủ động bật Flyway.
+-- Cấu hình hiện tại tắt Flyway; không tự động thay đổi database đã nhập.
+-- Flyway sẽ tạo lịch sử baseline 12; không chạy lại V1–V12 trên cấu trúc đã nhập.
 SET NAMES utf8mb4;
 -- Workbench Safe Updates: chỉ thay đổi trong phiên import, không đổi cấu hình toàn server.
 SET @erp_previous_safe_updates = @@SESSION.SQL_SAFE_UPDATES;
@@ -887,6 +888,23 @@ ALTER TABLE PHIEU_XUAT
 -- Phiếu xuất đã trừ tồn ở luồng cũ coi như quản lý kho đã duyệt (ghi theo người lập phiếu).
 UPDATE PHIEU_XUAT SET nguoiDuyet = maNV WHERE trangThai = 'Đã xuất';
 
+-- ===== V12__kiem_ke_don_hang.sql =====
+-- Kho lưu nguyên đơn hàng. Giữ nguyên bảng kiểm kê sản phẩm cũ để bảo toàn lịch sử.
+CREATE TABLE KIEM_KE_DON_HANG (
+  maPhieuKiemKe VARCHAR(20) NOT NULL,
+  maDonHang VARCHAR(10) NOT NULL,
+  soLuongHeThong INT NOT NULL,
+  soLuongThucTe INT NOT NULL,
+  chenhLech INT NOT NULL,
+  ghiChu VARCHAR(255) NULL,
+  PRIMARY KEY (maPhieuKiemKe, maDonHang),
+  CONSTRAINT fk_kkdh_phieu FOREIGN KEY (maPhieuKiemKe) REFERENCES PHIEU_KIEM_KE(maPhieuKiemKe),
+  CONSTRAINT fk_kkdh_don FOREIGN KEY (maDonHang) REFERENCES DonHang(maDonHang),
+  CONSTRAINT chk_kkdh_ht CHECK (soLuongHeThong IN (0, 1)),
+  CONSTRAINT chk_kkdh_tt CHECK (soLuongThucTe IN (0, 1)),
+  CONSTRAINT chk_kkdh_lech CHECK (chenhLech = soLuongThucTe - soLuongHeThong)
+) ENGINE=InnoDB;
+
 -- DỮ LIỆU BỔ SUNG: chỉ INSERT/UPDATE, không thay đổi cấu trúc của migration.
 -- Giữ toàn bộ bản ghi nguồn, bổ sung một chu trình kho/thu chi để phủ các bảng còn trống.
 START TRANSACTION;
@@ -951,6 +969,11 @@ INSERT INTO SoQuy VALUES ('SQ0000001','PT0000002',100000,0,'2026-09-16','NV00000
 INSERT INTO CongNo (maCongNo,maKhachHang,soTienPhaiTra,soTienDaTra,trangThai,ngayCapNhat)
 VALUES ('CN0000001','KH0000003',100000,60000,'Còn nợ','2026-09-16 17:00:00');
 COMMIT;
+
+-- Kiểm kê nguyên đơn: đơn DH0000004 đã hoàn tất nên không còn nằm trong kho.
+INSERT INTO PHIEU_KIEM_KE (maPhieuKiemKe,ngayKiemKe,khuVucKiemKe,maNV,trangThai,ghiChu)
+VALUES ('KK0000002','2026-09-18','Kho Hoàng Minh','NV0000003','Đã chốt','Kiểm tra đơn đã bàn giao');
+INSERT INTO KIEM_KE_DON_HANG VALUES ('KK0000002','DH0000004',0,0,0,'Đơn đã giao, không còn lưu kho');
 
 -- Kiểm đếm: mỗi bảng nghiệp vụ phải có ít nhất một bản ghi.
 SELECT 'PhongBan' AS tenBang, COUNT(*) AS soBanGhi FROM `PhongBan`
@@ -1021,7 +1044,9 @@ SELECT 'ChiTietDoiSoat' AS tenBang, COUNT(*) AS soBanGhi FROM `ChiTietDoiSoat`
 UNION ALL
 SELECT 'MocHanhTrinh' AS tenBang, COUNT(*) AS soBanGhi FROM `MocHanhTrinh`
 UNION ALL
-SELECT 'YeuCauCapNhatHoSo' AS tenBang, COUNT(*) AS soBanGhi FROM `YeuCauCapNhatHoSo`;
+SELECT 'YeuCauCapNhatHoSo' AS tenBang, COUNT(*) AS soBanGhi FROM `YeuCauCapNhatHoSo`
+UNION ALL
+SELECT 'KIEM_KE_DON_HANG' AS tenBang, COUNT(*) AS soBanGhi FROM `KIEM_KE_DON_HANG`;
 SELECT * FROM vw_SoDuQuy;
 SELECT * FROM vw_TonKhoChiTiet;
 SELECT * FROM vw_CongNoConLai;

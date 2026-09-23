@@ -41,10 +41,10 @@ export const MENU: MenuHeThong[] = [
       { ma: 'HT2_TRA_CUU_DON_NHAP_KHO', ten: 'Báo cáo phiếu nhập/xuất', duongDan: '/ht2/bao-cao-phieu' },
       { ma: 'HT2_LAP_PHIEU_NHAP', ten: 'Lập – cập nhật phiếu nhập', duongDan: '/ht2/phieu-nhap' },
       { ma: 'HT2_LAP_PHIEU_XUAT', ten: 'Lập – cập nhật phiếu xuất', duongDan: '/ht2/phieu-xuat' },
-      { ma: 'HT2_KIEM_KE', ten: 'Kiểm tra hàng nhập – xuất', duongDan: '/ht2/kiem-ke' },
+      { ma: 'HT2_KIEM_KE', ten: 'Kiểm kê đơn hàng', duongDan: '/ht2/kiem-ke' },
       // Người quản lý kho — giám sát
       { ma: 'HT2_PHE_DUYET_PHIEU_NHAP', ten: 'Quản lí phiếu nhập – xuất', duongDan: '/ht2/phe-duyet' },
-      { ma: 'HT2_DASHBOARD_NHAP_XUAT', ten: 'Theo dõi nhập – xuất kho', duongDan: '/ht2/dashboard' },
+      { ma: 'HT2_DASHBOARD_NHAP_XUAT', ten: 'Đơn hàng lưu kho', duongDan: '/ht2/dashboard' },
       { ma: 'HT2_BAO_CAO_NHAP_KHO', ten: 'Báo cáo nhập – xuất kho', duongDan: '/ht2/bao-cao' },
     ],
   },
